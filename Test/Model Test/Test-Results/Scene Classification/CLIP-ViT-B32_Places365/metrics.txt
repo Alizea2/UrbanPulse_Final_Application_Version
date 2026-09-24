@@ -1,0 +1,54 @@
+==========================================================================================
+Scene-Classification Evaluation — CLIP-ViT-B32 — Step 1b: Scene Classification
+==========================================================================================
+
+Grades each of the 420 scene_eval_set.csv rows (real Places365 photos): does the
+model's top-1 prediction out of all 21 CANDIDATE_SCENES match the expected label?
+
+------------------------------------------------------------------------------------------
+SUMMARY
+------------------------------------------------------------------------------------------
+Top-1 accuracy : 0.6333  (266/420 rows)
+------------------------------------------------------------------------------------------
+
+PER-SCENE BREAKDOWN
+------------------------------------------------------------------------------------------
+Scene                              Correct   Total    Accuracy
+------------------------------------------------------------------------------------------
+a park                                   7      20       0.350
+a garden                                14      20       0.700
+a forest or wooded area                 17      20       0.850
+a beach or waterfront                   19      20       0.950
+a busy street                           10      20       0.500
+a traffic intersection                   5      20       0.250
+a highway or motorway                   13      20       0.650
+a residential street                    12      20       0.600
+a quiet alley                           14      20       0.700
+a market or bazaar                      14      20       0.700
+a shopping mall                         15      20       0.750
+a café or restaurant                    17      20       0.850
+a construction site                     10      20       0.500
+an industrial area                       5      20       0.250
+inside a building                        3      20       0.150
+an office                               15      20       0.750
+a home interior                         19      20       0.950
+a school or university campus           15      20       0.750
+a playground                            20      20       1.000
+a train station or airport              11      20       0.550
+a parking lot                           11      20       0.550
+------------------------------------------------------------------------------------------
+
+WORST 10 SCENES (lowest accuracy) AND THEIR TOP CONFUSION
+------------------------------------------------------------------------------------------
+  inside a building                3/20 = 0.150  —  most often confused with 'a home interior' (12x)
+  a traffic intersection           5/20 = 0.250  —  most often confused with 'a busy street' (9x)
+  an industrial area               5/20 = 0.250  —  most often confused with 'a school or university campus' (3x)
+  a park                           7/20 = 0.350  —  most often confused with 'a playground' (3x)
+  a busy street                    10/20 = 0.500  —  most often confused with 'a residential street' (4x)
+  a construction site              10/20 = 0.500  —  most often confused with 'a school or university campus' (4x)
+  a train station or airport       11/20 = 0.550  —  most often confused with 'inside a building' (3x)
+  a parking lot                    11/20 = 0.550  —  most often confused with 'a residential street' (2x)
+  a residential street             12/20 = 0.600  —  most often confused with 'a home interior' (4x)
+  a highway or motorway            13/20 = 0.650  —  most often confused with 'a traffic intersection' (4x)
+
+==========================================================================================

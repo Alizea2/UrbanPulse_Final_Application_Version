@@ -1,0 +1,57 @@
+====================================================================================
+Whisper (small) on LibriSpeech test-clean — Step 2: Voice Note Transcription
+====================================================================================
+
+SUMMARY
+------------------------------------------------------------------------------------
+WER (Word Error Rate)  : 0.0350   (3.50% of words wrong)
+CER (Character Error Rate): 0.0153   (1.53% of characters wrong)
+Perfect transcriptions : 345/500   (69.0% exact match after normalization)
+Avg Time               : 2425 ms per clip
+Clips evaluated        : 500
+------------------------------------------------------------------------------------
+
+WORST 10 CLIPS BY WER (for qualitative error inspection)
+------------------------------------------------------------------------------------
+
+1089-134691-0009  (WER=0.96)
+  REF: angry with himself he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge but he still saw a reflection therein of their top heavy silk hats and humble tape like collars and loosely hanging clerical clothes brother hickey
+  HYP: angry with himself he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge but he still saw a reflection therein of their top heavy silk hats and humble tape like collars and loosely hanging clerical clothes angry with himself he tried to hide his face from their eyes by gazing down sideways into the shallow swirling water under the bridge but he still saw a reflection therein of their top heavy silk hats and humble tape like collars and loosely hanging clerical clothes
+
+6829-68769-0017  (WER=0.56)
+  REF: worse tom worse n ever replied the jailer gloomily
+  HYP: worst tom worst an error replied the jailor gloomily
+
+2830-3980-0026  (WER=0.50)
+  REF: verse 2
+  HYP: 1st 2
+
+3575-170457-0016  (WER=0.50)
+  REF: farewell madam
+  HYP: farewell madame
+
+4992-41797-0019  (WER=0.36)
+  REF: olive is mournful black eyes met nancy is sparkling brown ones
+  HYP: all of its mournful black eyes meant nancy is sparkling brown ones
+
+7176-92135-0020  (WER=0.36)
+  REF: 9923 elsinore 99 yes hallo is that you horatio hamlet speaking
+  HYP: 9923 elzenor double not yes hello is that you horatio hamlet speaking
+
+1995-1826-0003  (WER=0.33)
+  REF: better go he had counseled sententiously
+  HYP: better go he had counsels intentionally
+
+1995-1826-0008  (WER=0.33)
+  REF: some others too big cotton county
+  HYP: some others too be a cotton county
+
+8463-294825-0019  (WER=0.33)
+  REF: millimeter roughly 125th of an inch
+  HYP: millimeter roughly one 25th of an inch
+
+3729-6852-0016  (WER=0.29)
+  REF: madame quinson besides can answer your enquiries
+  HYP: madame quincen besides can answer your inquiries
+
+====================================================================================

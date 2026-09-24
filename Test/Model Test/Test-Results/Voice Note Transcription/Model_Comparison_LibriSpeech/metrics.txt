@@ -1,0 +1,18 @@
+==========================================================================================
+Model Comparison — LibriSpeech test-clean — Step 2: Voice Note Transcription
+Models: wav2vec2-base | Distil-Whisper | Whisper small | wav2vec2-large
+==========================================================================================
+
+OVERALL SUMMARY (ranked best to worst by WER)
+------------------------------------------------------------------------------------------
+Rank  Model                    WER       CER   Perfect Match   Avg Time (ms)
+------------------------------------------------------------------------------------------
+1     wav2vec2-large         1.60%     0.51%           81.0%             520
+2     wav2vec2-base          3.42%     1.03%           65.6%             238
+3     Whisper small          3.50%     1.53%           69.0%            2425
+4     Distil-Whisper         3.66%     1.57%           67.0%             957
+------------------------------------------------------------------------------------------
+
+All models evaluated on the same 500-clip random sample (seed=42) of LibriSpeech test-clean, using Whisper's official EnglishTextNormalizer before scoring, for direct comparability.
+
+==========================================================================================

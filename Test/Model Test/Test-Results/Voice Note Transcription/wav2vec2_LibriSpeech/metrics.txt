@@ -1,0 +1,57 @@
+====================================================================================
+wav2vec2 (facebook/wav2vec2-base-960h) on LibriSpeech test-clean — Step 2: Voice Note Transcription
+====================================================================================
+
+SUMMARY
+------------------------------------------------------------------------------------
+WER (Word Error Rate)  : 0.0342   (3.42% of words wrong)
+CER (Character Error Rate): 0.0103   (1.03% of characters wrong)
+Perfect transcriptions : 328/500   (65.6% exact match after normalization)
+Avg Time               : 238 ms per clip
+Clips evaluated        : 500
+------------------------------------------------------------------------------------
+
+WORST 10 CLIPS BY WER (for qualitative error inspection)
+------------------------------------------------------------------------------------
+
+7176-92135-0020  (WER=0.64)
+  REF: 9923 elsinore 99 yes hallo is that you horatio hamlet speaking
+  HYP: 99 to 3 elzinor double not yes hello is that you horatio hamlet speaking
+
+2094-142345-0024  (WER=0.50)
+  REF: munny my iron is twite told pease put it down to warm
+  HYP: money mirons twite told beese put it down to worm
+
+2830-3980-0026  (WER=0.50)
+  REF: verse 2
+  HYP: 1st 2
+
+3575-170457-0016  (WER=0.50)
+  REF: farewell madam
+  HYP: farewell madame
+
+7176-92135-0027  (WER=0.50)
+  REF: lady larkspur starts suddenly and turns towards him
+  HYP: lady larkesbour start suddenly and turned toward him
+
+1995-1826-0003  (WER=0.33)
+  REF: better go he had counseled sententiously
+  HYP: better go he had counsel cententiously
+
+8455-210777-0012  (WER=0.30)
+  REF: missus neverbend you must indeed be proud of your son
+  HYP: mis has neverbeen you must indeed be proud of your son
+
+3729-6852-0016  (WER=0.29)
+  REF: madame quinson besides can answer your enquiries
+  HYP: madame cuinson besides can answer your inquiries
+
+61-70970-0010  (WER=0.27)
+  REF: dismiss your squire robin and bid me good e e n
+  HYP: dismiss your squire robin and bid me good eating
+
+1089-134686-0001  (WER=0.25)
+  REF: stuff it into you his belly counseled him
+  HYP: stuffered into you his belly counseled him
+
+====================================================================================

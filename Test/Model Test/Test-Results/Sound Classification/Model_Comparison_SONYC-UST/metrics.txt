@@ -1,0 +1,157 @@
+====================================================================================================
+Model Comparison — SONYC-UST — Step 1: Sound Classification (23 fine-grained classes)
+Models: YAMNet | PANNs CNN14 | E-PANNs | EfficientAT
+====================================================================================================
+
+OVERALL SUMMARY
+----------------------------------------------------------------------------------------------------
+Model               Accuracy   Precision    Recall        F1       AUC   Avg Time (ms)
+----------------------------------------------------------------------------------------------------
+YAMNet                 0.973       0.130     0.044     0.055     0.741              25
+PANNs CNN14            0.974       0.177     0.079     0.094     0.804             169
+E-PANNs                0.975       0.207     0.087     0.107     0.798              94
+EfficientAT            0.974       0.188     0.097     0.109     0.865              79
+----------------------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN
+----------------------------------------------------------------------------------------------------
+
+small-sounding-engine  (Support: 1)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.454
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=0.383
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=0.665
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=0.860
+
+medium-sounding-engine  (Support: 41)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.621
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=0.634
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=0.585
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=0.588
+
+large-sounding-engine  (Support: 50)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.846
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=0.894
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=0.769
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=0.841
+
+rock-drill  (Support: 0)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+jackhammer  (Support: 3)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.864
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=0.970
+  E-PANNs        P=1.000  R=0.333  F1=0.500  AUC=0.983
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=0.938
+
+hoe-ram  (Support: 0)  [no mapping]
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+pile-driver  (Support: 0)  [no mapping]
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+non-machinery-impact  (Support: 51)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.582
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=0.655
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=0.657
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=0.663
+
+chainsaw  (Support: 0)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+small-medium-rotating-saw  (Support: 0)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+large-rotating-saw  (Support: 0)  [no mapping]
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+car-horn  (Support: 65)
+  YAMNet         P=1.000  R=0.062  F1=0.116  AUC=0.720
+  PANNs CNN14    P=0.900  R=0.138  F1=0.240  AUC=0.795
+  E-PANNs        P=0.923  R=0.185  F1=0.308  AUC=0.802
+  EfficientAT    P=0.857  R=0.092  F1=0.167  AUC=0.859
+
+car-alarm  (Support: 1)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.858
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=0.928
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=0.995
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=1.000
+
+siren  (Support: 25)
+  YAMNet         P=0.714  R=0.200  F1=0.312  AUC=0.799
+  PANNs CNN14    P=1.000  R=0.440  F1=0.611  AUC=0.866
+  E-PANNs        P=0.846  R=0.440  F1=0.579  AUC=0.805
+  EfficientAT    P=0.933  R=0.560  F1=0.700  AUC=0.944
+
+reverse-beeper  (Support: 10)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.874
+  PANNs CNN14    P=0.500  R=0.200  F1=0.286  AUC=0.842
+  E-PANNs        P=0.222  R=0.200  F1=0.211  AUC=0.849
+  EfficientAT    P=0.857  R=0.600  F1=0.706  AUC=0.964
+
+stationary-music  (Support: 18)  [no mapping]
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+mobile-music  (Support: 1)  [no mapping]
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+ice-cream-truck  (Support: 0)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+person-or-small-group-talking  (Support: 223)
+  YAMNet         P=0.785  R=0.704  F1=0.742  AUC=0.888
+  PANNs CNN14    P=0.667  R=0.897  F1=0.765  AUC=0.932
+  E-PANNs        P=0.774  R=0.785  F1=0.780  AUC=0.901
+  EfficientAT    P=0.672  R=0.892  F1=0.767  AUC=0.944
+
+person-or-small-group-shouting  (Support: 14)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=0.651
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=0.889
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=0.756
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=0.880
+
+large-crowd  (Support: 0)
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+amplified-speech  (Support: 0)  [no mapping]
+  YAMNet         P=0.000  R=0.000  F1=0.000  AUC=N/A
+  PANNs CNN14    P=0.000  R=0.000  F1=0.000  AUC=N/A
+  E-PANNs        P=0.000  R=0.000  F1=0.000  AUC=N/A
+  EfficientAT    P=0.000  R=0.000  F1=0.000  AUC=N/A
+
+dog-barking-whining  (Support: 21)
+  YAMNet         P=0.500  R=0.048  F1=0.087  AUC=0.739
+  PANNs CNN14    P=1.000  R=0.143  F1=0.250  AUC=0.862
+  E-PANNs        P=1.000  R=0.048  F1=0.091  AUC=0.804
+  EfficientAT    P=1.000  R=0.095  F1=0.174  AUC=0.901
+
+====================================================================================================

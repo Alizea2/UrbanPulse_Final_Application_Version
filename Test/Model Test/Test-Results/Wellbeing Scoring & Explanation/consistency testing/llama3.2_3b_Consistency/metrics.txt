@@ -1,0 +1,116 @@
+==========================================================================================
+Property-Based Consistency Evaluation — llama3.2:3b — Step 4: Wellbeing Scoring (4-input)
+==========================================================================================
+
+Why this evaluation exists: no validated ground truth exists for this fused task, so
+instead of grading against a possibly-wrong invented absolute number, this checks
+invariants that must hold regardless of what the 'true' score even is.
+
+------------------------------------------------------------------------------------------
+1. SOUND-RANKING MONOTONICITY
+------------------------------------------------------------------------------------------
+Literature-ranked worst -> best sequence (fixed emotion=Calm, scene=inside a building):
+  jackhammer                          -> 0.70
+  siren                               -> 0.70
+  car-alarm                           -> 0.50
+  car-horn                            -> 0.50
+  person-or-small-group-shouting      -> 0.50
+  large-sounding-engine               -> 0.50
+  large-crowd                         -> 0.56
+  mobile-music                        -> 0.56
+  stationary-music                    -> 0.56
+  person-or-small-group-talking       -> 0.50
+Spearman rho: -0.2895  (p=0.4172)
+(+1.0 = perfect agreement with literature ranking, 0 = no relationship, -1.0 = backwards)
+
+------------------------------------------------------------------------------------------
+2. EMOTION-RANKING MONOTONICITY
+------------------------------------------------------------------------------------------
+Literature-ranked worst -> best sequence (fixed sound=large-crowd, scene=inside a building):
+  Stressed     -> 0.42
+  Annoyed      -> 0.49
+  Anxious      -> 0.41
+  Calm         -> 0.74
+  Content      -> 0.78
+Spearman rho: 0.7000  (p=0.1881)
+
+------------------------------------------------------------------------------------------
+3. SCENE-RANKING MONOTONICITY
+------------------------------------------------------------------------------------------
+Literature-ranked worst -> best sequence (fixed sound=large-crowd, emotion=Calm):
+  a construction site          -> 0.64
+  an industrial area           -> 0.64
+  a traffic intersection       -> 0.56
+  a busy street                -> 0.56
+  a train station or airport   -> 0.56
+  a market or bazaar           -> 0.56
+  an office                    -> 0.50
+  a café or restaurant         -> 0.64
+  a residential street         -> 0.50
+  a forest or wooded area      -> 0.64
+Spearman rho: -0.2465  (p=0.4923)
+Score spread across sequence: 0.1400 (expected small — scene is a bounded +/-0.10 modifier, not a core 50%-weighted signal)
+
+------------------------------------------------------------------------------------------
+4. TRANSCRIPT-RANKING MONOTONICITY
+------------------------------------------------------------------------------------------
+Sentiment-ranked worst -> best sequence (fixed sound=large-crowd, emotion=Calm):
+  I really can't stand this anymore, it's awful here   -> 0.38
+  I'm getting pretty fed up, this is a lot to deal w   -> 0.42
+  This is starting to get to me a little.              -> 0.42
+  It's fine here, nothing special either way.          -> 0.56
+  Things are pretty good right now, can't complain.    -> 0.74
+  This is such a nice spot, I'm really enjoying bein   -> 0.74
+  I am absolutely loving this moment, everything fee   -> 0.78
+Spearman rho: 0.9820  (p=0.0001)
+Score spread across sequence: 0.4000 (expected small — transcript is a bounded +/-0.10 modifier, not a core 50%-weighted signal)
+
+------------------------------------------------------------------------------------------
+5. TEST-RETEST RELIABILITY
+------------------------------------------------------------------------------------------
+  jackhammer                     + Stressed   + a construction site      scores=[0.56, 0.56, 0.56, 0.56, 0.56]  stdev=0.0000
+  siren                          + Anxious    + a traffic intersection   scores=[0.56, 0.56, 0.56, 0.56, 0.56]  stdev=0.0000
+  car-alarm                      + Annoyed    + a parking lot            scores=[0.35, 0.35, 0.35, 0.35, 0.35]  stdev=0.0000
+  large-sounding-engine          + Calm       + a residential street     scores=[0.68, 0.68, 0.68, 0.68, 0.68]  stdev=0.0000
+  person-or-small-group-talking  + Content    + a café or restaurant     scores=[0.86, 0.86, 0.86, 0.86, 0.86]  stdev=0.0000
+  stationary-music               + Calm       + a park                   scores=[0.78, 0.78, 0.78, 0.78, 0.78]  stdev=0.0000
+  large-crowd                    + Anxious    + a busy street            scores=[0.41, 0.41, 0.41, 0.41, 0.41]  stdev=0.0000
+  dog-barking-whining            + Annoyed    + a quiet alley            scores=[0.58, 0.58, 0.58, 0.58, 0.58]  stdev=0.0000
+  rock-drill                     + Stressed   + an industrial area       scores=[0.5, 0.5, 0.5, 0.5, 0.5]  stdev=0.0000
+  mobile-music                   + Content    + a garden                 scores=[0.86, 0.86, 0.86, 0.86, 0.86]  stdev=0.0000
+  car-horn                       + Stressed   + a highway or motorway    scores=[0.44, 0.44, 0.44, 0.44, 0.44]  stdev=0.0000
+  amplified-speech               + Calm       + a school or university campus scores=[0.78, 0.78, 0.78, 0.78, 0.78]  stdev=0.0000
+  ice-cream-truck                + Content    + a playground             scores=[0.92, 0.92, 0.92, 0.92, 0.92]  stdev=0.0000
+  chainsaw                       + Anxious    + a construction site      scores=[0.6, 0.6, 0.6, 0.6, 0.6]  stdev=0.0000
+  reverse-beeper                 + Annoyed    + a parking lot            scores=[0.46, 0.46, 0.46, 0.46, 0.46]  stdev=0.0000
+  non-machinery-impact           + Calm       + a beach or waterfront    scores=[0.96, 0.96, 0.96, 0.96, 0.96]  stdev=0.0000
+  pile-driver                    + Stressed   + an industrial area       scores=[0.56, 0.56, 0.56, 0.56, 0.56]  stdev=0.0000
+  person-or-small-group-shouting + Anxious    + a market or bazaar       scores=[0.35, 0.35, 0.35, 0.35, 0.35]  stdev=0.0000
+  small-sounding-engine          + Content    + a home interior          scores=[0.86, 0.86, 0.86, 0.86, 0.86]  stdev=0.0000
+  hoe-ram                        + Annoyed    + a shopping mall          scores=[0.49, 0.49, 0.49, 0.49, 0.49]  stdev=0.0000
+Mean stdev across all inputs: 0.0000
+Max stdev (worst single input): 0.0000
+(Lower is better — near 0.0 means the model gives the same score every time)
+
+------------------------------------------------------------------------------------------
+6. EXTREMES SANITY CHECK
+------------------------------------------------------------------------------------------
+  WORST  jackhammer                     + Stressed   + a construction site      -> 0.56 (expected < 0.35) [FAIL]
+  WORST  pile-driver                    + Stressed   + an industrial area       -> 0.56 (expected < 0.35) [FAIL]
+  WORST  siren                          + Annoyed    + a highway or motorway    -> 0.63 (expected < 0.35) [FAIL]
+  BEST   person-or-small-group-talking  + Content    + a forest or wooded area  -> 0.86 (expected > 0.65) [PASS]
+  BEST   stationary-music               + Calm       + a park                   -> 0.82 (expected > 0.65) [PASS]
+  BEST   mobile-music                   + Content    + a garden                 -> 0.82 (expected > 0.65) [PASS]
+Pass rate: 50.0%
+
+------------------------------------------------------------------------------------------
+SUMMARY
+------------------------------------------------------------------------------------------
+Sound-ranking Spearman rho      : -0.2895
+Emotion-ranking Spearman rho    : 0.7000
+Scene-ranking Spearman rho      : -0.2465
+Transcript-ranking Spearman rho : 0.9820
+Test-retest mean stdev          : 0.0000
+Extremes pass rate              : 50.0%
+Total evaluation time            : 235s
+==========================================================================================

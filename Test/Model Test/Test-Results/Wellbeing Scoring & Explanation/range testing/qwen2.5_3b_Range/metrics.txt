@@ -1,0 +1,39 @@
+==========================================================================================
+Range-Matching Evaluation — qwen2.5:3b — Step 4: Wellbeing Scoring & Explanation
+==========================================================================================
+
+Grades each of the 115 wellbeing_eval_set_4input.csv rows: is the model's predicted score
+within that row's [acceptable_score_min, acceptable_score_max] range?
+
+------------------------------------------------------------------------------------------
+SUMMARY
+------------------------------------------------------------------------------------------
+In-range accuracy : 0.5652  (65/115 rows)
+Mean miss distance (rows outside range only): 0.0960
+------------------------------------------------------------------------------------------
+
+PER-EMOTION BREAKDOWN
+------------------------------------------------------------------------------------------
+Emotion         In-range     Total    Accuracy
+------------------------------------------------------------------------------------------
+Calm                  12        23       0.522
+Content                6        23       0.261
+Anxious               19        23       0.826
+Stressed              12        23       0.522
+Annoyed               16        23       0.696
+------------------------------------------------------------------------------------------
+
+WORST 10 MISSES (largest miss distance)
+------------------------------------------------------------------------------------------
+  #86   ice-cream-truck             Calm      a forest or wooded area  predicted=0.24  range=[0.68, 0.88]  miss=0.44
+  #92   person-or-small-group-talkingContent   a quiet alley            predicted=0.38  range=[0.69, 0.89]  miss=0.31
+  #87   ice-cream-truck             Content   a beach or waterfront    predicted=0.40  range=[0.68, 0.88]  miss=0.28
+  #91   person-or-small-group-talkingCalm      a residential street     predicted=0.40  range=[0.68, 0.88]  miss=0.28
+  #111  dog-barking-whining         Calm      a highway or motorway    predicted=0.08  range=[0.34, 0.54]  miss=0.26
+  #77   stationary-music            Content   inside a building        predicted=0.36  range=[0.61, 0.81]  miss=0.25
+  #71   reverse-beeper              Calm      a quiet alley            predicted=0.16  range=[0.39, 0.59]  miss=0.23
+  #88   ice-cream-truck             Anxious   a busy street            predicted=0.24  range=[0.41, 0.61]  miss=0.17
+  #6    medium-sounding-engine      Calm      a highway or motorway    predicted=0.22  range=[0.38, 0.58]  miss=0.16
+  #46   small-medium-rotating-saw   Calm      a busy street            predicted=0.16  range=[0.32, 0.52]  miss=0.16
+
+==========================================================================================

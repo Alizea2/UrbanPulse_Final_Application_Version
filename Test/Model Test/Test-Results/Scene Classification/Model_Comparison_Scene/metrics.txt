@@ -1,0 +1,147 @@
+====================================================================================================
+Model Comparison — Scene Classification — Step 1b: Photo -> Scene Label
+Models: CLIP-ViT-B32 (current) | CLIP-ViT-L14 | OpenCLIP-ViT-B32-LAION2B | SigLIP-B16
+====================================================================================================
+
+OVERALL SUMMARY
+----------------------------------------------------------------------------------------------------
+Model                           Top-1 Accuracy
+----------------------------------------------------------------------------------------------------
+CLIP-ViT-B32 (current)                  0.6333
+CLIP-ViT-L14                            0.6405
+OpenCLIP-ViT-B32-LAION2B                0.6714
+SigLIP-B16                              0.6690
+----------------------------------------------------------------------------------------------------
+Ranked by top-1 accuracy: OpenCLIP-ViT-B32-LAION2B (67.1%) > SigLIP-B16 (66.9%) > CLIP-ViT-L14 (64.0%) > CLIP-ViT-B32 (current) (63.3%)
+----------------------------------------------------------------------------------------------------
+
+PER-SCENE BREAKDOWN
+----------------------------------------------------------------------------------------------------
+
+a beach or waterfront
+  CLIP-ViT-B32 (current)       19/20 = 0.950
+  CLIP-ViT-L14                 19/20 = 0.950
+  OpenCLIP-ViT-B32-LAION2B     19/20 = 0.950
+  SigLIP-B16                   19/20 = 0.950
+
+a busy street
+  CLIP-ViT-B32 (current)       10/20 = 0.500
+  CLIP-ViT-L14                 10/20 = 0.500
+  OpenCLIP-ViT-B32-LAION2B     14/20 = 0.700
+  SigLIP-B16                   10/20 = 0.500
+
+a café or restaurant
+  CLIP-ViT-B32 (current)       17/20 = 0.850
+  CLIP-ViT-L14                 17/20 = 0.850
+  OpenCLIP-ViT-B32-LAION2B     17/20 = 0.850
+  SigLIP-B16                   19/20 = 0.950
+
+a construction site
+  CLIP-ViT-B32 (current)       10/20 = 0.500
+  CLIP-ViT-L14                 17/20 = 0.850
+  OpenCLIP-ViT-B32-LAION2B     14/20 = 0.700
+  SigLIP-B16                   17/20 = 0.850
+
+a forest or wooded area
+  CLIP-ViT-B32 (current)       17/20 = 0.850
+  CLIP-ViT-L14                 15/20 = 0.750
+  OpenCLIP-ViT-B32-LAION2B     15/20 = 0.750
+  SigLIP-B16                   13/20 = 0.650
+
+a garden
+  CLIP-ViT-B32 (current)       14/20 = 0.700
+  CLIP-ViT-L14                 16/20 = 0.800
+  OpenCLIP-ViT-B32-LAION2B     11/20 = 0.550
+  SigLIP-B16                   16/20 = 0.800
+
+a highway or motorway
+  CLIP-ViT-B32 (current)       13/20 = 0.650
+  CLIP-ViT-L14                 14/20 = 0.700
+  OpenCLIP-ViT-B32-LAION2B     13/20 = 0.650
+  SigLIP-B16                   12/20 = 0.600
+
+a home interior
+  CLIP-ViT-B32 (current)       19/20 = 0.950
+  CLIP-ViT-L14                 19/20 = 0.950
+  OpenCLIP-ViT-B32-LAION2B     18/20 = 0.900
+  SigLIP-B16                   19/20 = 0.950
+
+a market or bazaar
+  CLIP-ViT-B32 (current)       14/20 = 0.700
+  CLIP-ViT-L14                 15/20 = 0.750
+  OpenCLIP-ViT-B32-LAION2B     14/20 = 0.700
+  SigLIP-B16                   15/20 = 0.750
+
+a park
+  CLIP-ViT-B32 (current)       7/20 = 0.350
+  CLIP-ViT-L14                 9/20 = 0.450
+  OpenCLIP-ViT-B32-LAION2B     11/20 = 0.550
+  SigLIP-B16                   12/20 = 0.600
+
+a parking lot
+  CLIP-ViT-B32 (current)       11/20 = 0.550
+  CLIP-ViT-L14                 10/20 = 0.500
+  OpenCLIP-ViT-B32-LAION2B     11/20 = 0.550
+  SigLIP-B16                   11/20 = 0.550
+
+a playground
+  CLIP-ViT-B32 (current)       20/20 = 1.000
+  CLIP-ViT-L14                 17/20 = 0.850
+  OpenCLIP-ViT-B32-LAION2B     18/20 = 0.900
+  SigLIP-B16                   19/20 = 0.950
+
+a quiet alley
+  CLIP-ViT-B32 (current)       14/20 = 0.700
+  CLIP-ViT-L14                 13/20 = 0.650
+  OpenCLIP-ViT-B32-LAION2B     19/20 = 0.950
+  SigLIP-B16                   18/20 = 0.900
+
+a residential street
+  CLIP-ViT-B32 (current)       12/20 = 0.600
+  CLIP-ViT-L14                 13/20 = 0.650
+  OpenCLIP-ViT-B32-LAION2B     16/20 = 0.800
+  SigLIP-B16                   14/20 = 0.700
+
+a school or university campus
+  CLIP-ViT-B32 (current)       15/20 = 0.750
+  CLIP-ViT-L14                 12/20 = 0.600
+  OpenCLIP-ViT-B32-LAION2B     12/20 = 0.600
+  SigLIP-B16                   9/20 = 0.450
+
+a shopping mall
+  CLIP-ViT-B32 (current)       15/20 = 0.750
+  CLIP-ViT-L14                 11/20 = 0.550
+  OpenCLIP-ViT-B32-LAION2B     15/20 = 0.750
+  SigLIP-B16                   12/20 = 0.600
+
+a traffic intersection
+  CLIP-ViT-B32 (current)       5/20 = 0.250
+  CLIP-ViT-L14                 4/20 = 0.200
+  OpenCLIP-ViT-B32-LAION2B     7/20 = 0.350
+  SigLIP-B16                   6/20 = 0.300
+
+a train station or airport
+  CLIP-ViT-B32 (current)       11/20 = 0.550
+  CLIP-ViT-L14                 13/20 = 0.650
+  OpenCLIP-ViT-B32-LAION2B     9/20 = 0.450
+  SigLIP-B16                   11/20 = 0.550
+
+an industrial area
+  CLIP-ViT-B32 (current)       5/20 = 0.250
+  CLIP-ViT-L14                 7/20 = 0.350
+  OpenCLIP-ViT-B32-LAION2B     5/20 = 0.250
+  SigLIP-B16                   3/20 = 0.150
+
+an office
+  CLIP-ViT-B32 (current)       15/20 = 0.750
+  CLIP-ViT-L14                 13/20 = 0.650
+  OpenCLIP-ViT-B32-LAION2B     16/20 = 0.800
+  SigLIP-B16                   16/20 = 0.800
+
+inside a building
+  CLIP-ViT-B32 (current)       3/20 = 0.150
+  CLIP-ViT-L14                 5/20 = 0.250
+  OpenCLIP-ViT-B32-LAION2B     8/20 = 0.400
+  SigLIP-B16                   10/20 = 0.500
+
+====================================================================================================

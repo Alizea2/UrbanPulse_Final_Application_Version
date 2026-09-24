@@ -1,0 +1,54 @@
+====================================================================================
+HuBERT SER (superb/hubert-large-superb-er) on RAVDESS — Step 3: Emotion Detection from Speech
+====================================================================================
+
+SUMMARY (UrbanPulse 5-state mapping)
+------------------------------------------------------------------------------------
+Accuracy   : 0.2820   (28.20% of clips correctly classified)
+Precision  : 0.2305   (macro — average trustworthiness across all 5 states)
+Recall     : 0.2700   (macro — average how much it actually catches)
+F1         : 0.1745   (combined precision+recall score)
+Avg Time   : 280 ms per clip
+Clips evaluated: 500  (calm/surprised excluded — no model equivalent)
+------------------------------------------------------------------------------------
+Native-label accuracy (model's raw label vs its 4 directly-matchable RAVDESS emotions): 0.2720 (27.20%)
+NOTE: this model has only 4 output classes (neutral/happy/angry/sad) — no disgust or fear
+label exists, so it can NEVER predict 'Annoyed'. Caps its ceiling below models with full
+emotion coverage.
+------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN
+------------------------------------------------------------------------------------
+UrbanPulse State       Precision      Recall          F1   Support
+------------------------------------------------------------------------------------
+Calm                       0.000       0.000       0.000        42
+Content                    0.208       0.128       0.158        86
+Anxious                    0.714       0.222       0.339       180
+Stressed                   0.231       1.000       0.375        90
+Annoyed                    0.000       0.000       0.000       102  [unreachable — no matching model label]
+------------------------------------------------------------------------------------
+
+CONFUSION MATRIX (rows = true RAVDESS emotion mapped to UrbanPulse state, columns = predicted)
+------------------------------------------------------------------------------------
+True \ Pred       Calm   Content   Anxious  Stressed   Annoyed
+Calm                 0         0         3        39         0
+Content              0        11         3        72         0
+Anxious              1        39        40       100         0
+Stressed             0         0         0        90         0
+Annoyed              0         3        10        89         0
+------------------------------------------------------------------------------------
+
+SAMPLE PREDICTIONS (first 10 clips, for qualitative inspection)
+------------------------------------------------------------------------------------
+Actor_01/03-01-01-01-01-01-01.wav  [neutral -> Calm]  predicted: ang -> Stressed (conf=0.87) (WRONG)
+Actor_01/03-01-01-01-02-01-01.wav  [neutral -> Calm]  predicted: ang -> Stressed (conf=0.79) (WRONG)
+Actor_01/03-01-01-01-02-02-01.wav  [neutral -> Calm]  predicted: ang -> Stressed (conf=0.40) (WRONG)
+Actor_01/03-01-03-01-02-02-01.wav  [happy -> Content]  predicted: ang -> Stressed (conf=0.97) (WRONG)
+Actor_01/03-01-03-02-01-01-01.wav  [happy -> Content]  predicted: ang -> Stressed (conf=0.83) (WRONG)
+Actor_01/03-01-03-02-01-02-01.wav  [happy -> Content]  predicted: sad -> Anxious (conf=0.40) (WRONG)
+Actor_01/03-01-03-02-02-02-01.wav  [happy -> Content]  predicted: ang -> Stressed (conf=0.92) (WRONG)
+Actor_01/03-01-04-01-01-02-01.wav  [sad -> Anxious]  predicted: ang -> Stressed (conf=0.48) (WRONG)
+Actor_01/03-01-04-01-02-02-01.wav  [sad -> Anxious]  predicted: ang -> Stressed (conf=0.62) (WRONG)
+Actor_01/03-01-04-02-02-02-01.wav  [sad -> Anxious]  predicted: ang -> Stressed (conf=0.86) (WRONG)
+
+====================================================================================

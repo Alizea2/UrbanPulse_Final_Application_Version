@@ -1,0 +1,114 @@
+=== Sound Classification (EfficientAT) — /api/analyze, n=20 ===
+    warm-up 1/2: 0.145s (excluded)
+    warm-up 2/2: 0.087s (excluded)
+    run 1/20: 0.087s
+    run 2/20: 0.087s
+    run 3/20: 0.086s
+    run 4/20: 0.083s
+    run 5/20: 0.085s
+    run 6/20: 0.086s
+    run 7/20: 0.086s
+    run 8/20: 0.086s
+    run 9/20: 0.087s
+    run 10/20: 0.087s
+    run 11/20: 0.091s
+    run 12/20: 0.086s
+    run 13/20: 0.088s
+    run 14/20: 0.085s
+    run 15/20: 0.084s
+    run 16/20: 0.085s
+    run 17/20: 0.083s
+    run 18/20: 0.086s
+    run 19/20: 0.087s
+    run 20/20: 0.086s
+
+Sound Classification (EfficientAT): mean=0.086s  min=0.083s  max=0.091s  p95=0.089s
+
+=== Scene Classification (CLIP) — /api/scene, n=20 ===
+    warm-up 1/2: 0.917s (excluded)
+    warm-up 2/2: 0.073s (excluded)
+    run 1/20: 0.062s
+    run 2/20: 0.063s
+    run 3/20: 0.065s
+    run 4/20: 0.064s
+    run 5/20: 0.058s
+    run 6/20: 0.060s
+    run 7/20: 0.062s
+    run 8/20: 0.062s
+    run 9/20: 0.060s
+    run 10/20: 0.058s
+    run 11/20: 0.059s
+    run 12/20: 0.057s
+    run 13/20: 0.059s
+    run 14/20: 0.059s
+    run 15/20: 0.059s
+    run 16/20: 0.059s
+    run 17/20: 0.058s
+    run 18/20: 0.059s
+    run 19/20: 0.058s
+    run 20/20: 0.058s
+
+Scene Classification (CLIP): mean=0.060s  min=0.057s  max=0.065s  p95=0.064s
+
+=== Transcription + Emotion (wav2vec2 + SER) — /api/transcribe, n=20 ===
+    warm-up 1/2: 2.816s (excluded)
+    warm-up 2/2: 2.573s (excluded)
+    run 1/20: 2.952s
+    run 2/20: 2.933s
+    run 3/20: 2.936s
+    run 4/20: 2.564s
+    run 5/20: 1.680s
+    run 6/20: 2.034s
+    run 7/20: 2.373s
+    run 8/20: 1.695s
+    run 9/20: 2.036s
+    run 10/20: 2.688s
+    run 11/20: 2.485s
+    run 12/20: 2.230s
+    run 13/20: 2.971s
+    run 14/20: 3.636s
+    run 15/20: 4.502s
+    run 16/20: 3.570s
+    run 17/20: 2.630s
+    run 18/20: 3.057s
+    run 19/20: 2.732s
+    run 20/20: 2.735s
+
+Transcription + Emotion (wav2vec2 x2): mean=2.722s  min=1.680s  max=4.502s  p95=3.680s
+
+=== Steps 1-3 only (analyze -> scene -> transcribe), n=20 ===
+    run 1/20: 3.893s
+    run 2/20: 3.858s
+    run 3/20: 4.540s
+    run 4/20: 4.293s
+    run 5/20: 4.853s
+    run 6/20: 4.283s
+    run 7/20: 4.438s
+    run 8/20: 4.630s
+    run 9/20: 4.732s
+    run 10/20: 4.544s
+    run 11/20: 4.465s
+    run 12/20: 4.834s
+    run 13/20: 5.063s
+    run 14/20: 5.068s
+    run 15/20: 4.821s
+    run 16/20: 4.838s
+    run 17/20: 5.468s
+    run 18/20: 6.941s
+    run 19/20: 5.084s
+    run 20/20: 5.360s
+
+Steps 1-3 (paired, requirement scope): mean=4.800s  min=3.858s  max=6.941s  p95=5.542s
+
+    -> p95 = 5.542s vs the 4s budget in Table 3.2.2: EXCEEDS
+
+(Skipped: Wellbeing Scoring and End-to-end pipeline — both call the Ollama LLM.)
+
+
+
+===== SUMMARY =====
+Stage                                           Mean (s)    Min (s)    Max (s)    P95 (s)
+Sound Classification (EfficientAT)                 0.086      0.083      0.091      0.089
+Scene Classification (CLIP)                        0.060      0.057      0.065      0.064
+Transcription + Emotion (wav2vec2 x2)              2.722      1.680      4.502      3.680
+Steps 1-3 (paired, requirement scope)              4.800      3.858      6.941      5.542

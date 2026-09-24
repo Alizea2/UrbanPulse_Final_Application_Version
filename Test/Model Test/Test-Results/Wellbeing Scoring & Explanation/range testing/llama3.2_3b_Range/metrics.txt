@@ -1,0 +1,39 @@
+==========================================================================================
+Range-Matching Evaluation — llama3.2:3b — Step 4: Wellbeing Scoring & Explanation
+==========================================================================================
+
+Grades each of the 115 wellbeing_eval_set_4input.csv rows: is the model's predicted score
+within that row's [acceptable_score_min, acceptable_score_max] range?
+
+------------------------------------------------------------------------------------------
+SUMMARY
+------------------------------------------------------------------------------------------
+In-range accuracy : 0.2435  (28/115 rows)
+Mean miss distance (rows outside range only): 0.1883
+------------------------------------------------------------------------------------------
+
+PER-EMOTION BREAKDOWN
+------------------------------------------------------------------------------------------
+Emotion         In-range     Total    Accuracy
+------------------------------------------------------------------------------------------
+Calm                  13        23       0.565
+Content                7        23       0.304
+Anxious                3        23       0.130
+Stressed               2        23       0.087
+Annoyed                3        23       0.130
+------------------------------------------------------------------------------------------
+
+WORST 10 MISSES (largest miss distance)
+------------------------------------------------------------------------------------------
+  #24   jackhammer                  Stressed  a beach or waterfront    predicted=1.00  range=[0.19, 0.39]  miss=0.61
+  #34   pile-driver                 Stressed  an industrial area       predicted=0.78  range=[0.00, 0.18]  miss=0.60
+  #69   siren                       Stressed  a highway or motorway    predicted=0.64  range=[0.00, 0.10]  miss=0.54
+  #55   large-rotating-saw          Annoyed   an industrial area       predicted=0.67  range=[0.00, 0.14]  miss=0.53
+  #48   small-medium-rotating-saw   Anxious   a highway or motorway    predicted=0.86  range=[0.16, 0.36]  miss=0.50
+  #54   large-rotating-saw          Stressed  a construction site      predicted=0.56  range=[0.00, 0.11]  miss=0.45
+  #33   pile-driver                 Anxious   a construction site      predicted=0.68  range=[0.07, 0.27]  miss=0.41
+  #29   hoe-ram                     Stressed  a quiet alley            predicted=0.58  range=[0.01, 0.21]  miss=0.37
+  #35   pile-driver                 Annoyed   inside a building        predicted=0.64  range=[0.07, 0.27]  miss=0.37
+  #74   reverse-beeper              Stressed  a café or restaurant     predicted=0.72  range=[0.15, 0.35]  miss=0.37
+
+==========================================================================================

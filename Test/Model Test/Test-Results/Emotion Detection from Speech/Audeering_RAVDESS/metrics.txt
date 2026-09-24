@@ -1,0 +1,54 @@
+====================================================================================
+audEERING dimensional model (arousal/dominance/valence) on RAVDESS
+Step 3: Emotion Detection from Speech
+====================================================================================
+
+SUMMARY (UrbanPulse 5-state mapping, via median-split circumplex classification)
+------------------------------------------------------------------------------------
+Accuracy   : 0.4720   (47.20% of clips correctly classified)
+Precision  : 0.3856   (macro — average trustworthiness across all 5 states)
+Recall     : 0.3867   (macro — average how much it actually catches)
+F1         : 0.3661   (combined precision+recall score)
+Avg Time   : 158 ms per clip
+Clips evaluated: 500  (all 8 RAVDESS emotions usable — dimensional output has no gaps)
+------------------------------------------------------------------------------------
+Calibration thresholds (percentile-based, computed from this run's own data):
+  Arousal: low <= 0.481, high >= 0.650
+  Valence: low <= 0.285, high >= 0.344
+------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN
+------------------------------------------------------------------------------------
+UrbanPulse State       Precision      Recall          F1   Support
+------------------------------------------------------------------------------------
+Calm                       0.472       0.658       0.550       155
+Content                    0.359       0.609       0.452        69
+Anxious                    0.469       0.275       0.347       138
+Stressed                   0.628       0.391       0.482       138
+Annoyed                    0.000       0.000       0.000         0
+------------------------------------------------------------------------------------
+
+CONFUSION MATRIX (rows = true RAVDESS emotion mapped to UrbanPulse state, columns = predicted)
+------------------------------------------------------------------------------------
+True \ Pred       Calm   Content   Anxious  Stressed   Annoyed
+Calm               102        33        11         9         0
+Content             12        42         7         8         0
+Anxious             66        19        38        15         0
+Stressed            36        23        25        54         0
+Annoyed              0         0         0         0         0
+------------------------------------------------------------------------------------
+
+SAMPLE PREDICTIONS (first 10 clips, for qualitative inspection)
+------------------------------------------------------------------------------------
+Actor_01/03-01-01-01-01-02-01.wav  [neutral -> Calm]  predicted: Calm (A=0.44, V=0.30) (correct)
+Actor_01/03-01-02-01-01-01-01.wav  [calm -> Calm]  predicted: Calm (A=0.45, V=0.35) (correct)
+Actor_01/03-01-02-01-02-01-01.wav  [calm -> Calm]  predicted: Calm (A=0.36, V=0.33) (correct)
+Actor_01/03-01-02-01-02-02-01.wav  [calm -> Calm]  predicted: Calm (A=0.32, V=0.30) (correct)
+Actor_01/03-01-03-01-01-02-01.wav  [happy -> Content]  predicted: Content (A=0.55, V=0.37) (correct)
+Actor_01/03-01-03-01-02-01-01.wav  [happy -> Content]  predicted: Content (A=0.49, V=0.36) (correct)
+Actor_01/03-01-03-02-01-01-01.wav  [happy -> Content]  predicted: Calm (A=0.60, V=0.32) (WRONG)
+Actor_01/03-01-03-02-02-02-01.wav  [happy -> Content]  predicted: Content (A=0.63, V=0.41) (correct)
+Actor_01/03-01-04-01-02-02-01.wav  [sad -> Anxious]  predicted: Calm (A=0.37, V=0.35) (WRONG)
+Actor_01/03-01-05-01-01-01-01.wav  [angry -> Stressed]  predicted: Calm (A=0.76, V=0.32) (WRONG)
+
+====================================================================================

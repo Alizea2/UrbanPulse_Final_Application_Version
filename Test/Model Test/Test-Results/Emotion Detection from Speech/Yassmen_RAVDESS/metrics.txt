@@ -1,0 +1,51 @@
+====================================================================================
+Yassmen wav2vec2 (CREMA-D fine-tuned) on RAVDESS — Step 3: Emotion Detection from Speech
+====================================================================================
+
+SUMMARY (UrbanPulse 5-state mapping)
+------------------------------------------------------------------------------------
+Accuracy   : 0.6100   (61.00% of clips correctly classified)
+Precision  : 0.7128   (macro — average trustworthiness across all 5 states)
+Recall     : 0.5249   (macro — average how much it actually catches)
+F1         : 0.5118   (combined precision+recall score)
+Avg Time   : 249 ms per clip
+Clips evaluated: 500  (calm/surprised excluded — no model equivalent)
+------------------------------------------------------------------------------------
+Native 6-class accuracy (model's raw label vs RAVDESS ground truth, before UrbanPulse mapping): 0.4480 (44.80%)
+------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN
+------------------------------------------------------------------------------------
+UrbanPulse State       Precision      Recall          F1   Support
+------------------------------------------------------------------------------------
+Calm                       0.636       0.333       0.438        42
+Content                    1.000       0.140       0.245        86
+Anxious                    0.623       0.900       0.736       180
+Stressed                   0.500       0.889       0.640        90
+Annoyed                    0.804       0.363       0.500       102
+------------------------------------------------------------------------------------
+
+CONFUSION MATRIX (rows = true RAVDESS emotion mapped to UrbanPulse state, columns = predicted)
+------------------------------------------------------------------------------------
+True \ Pred       Calm   Content   Anxious  Stressed   Annoyed
+Calm                14         0        21         7         0
+Content              5        12        54        14         1
+Anxious              3         0       162         7         8
+Stressed             0         0        10        80         0
+Annoyed              0         0        13        52        37
+------------------------------------------------------------------------------------
+
+SAMPLE PREDICTIONS (first 10 clips, for qualitative inspection)
+------------------------------------------------------------------------------------
+Actor_01/03-01-01-01-01-01-01.wav  [neutral -> Calm]  predicted: FEA -> Anxious (conf=0.82) (WRONG)
+Actor_01/03-01-01-01-02-01-01.wav  [neutral -> Calm]  predicted: FEA -> Anxious (conf=0.80) (WRONG)
+Actor_01/03-01-01-01-02-02-01.wav  [neutral -> Calm]  predicted: FEA -> Anxious (conf=0.93) (WRONG)
+Actor_01/03-01-03-01-02-02-01.wav  [happy -> Content]  predicted: FEA -> Anxious (conf=0.48) (WRONG)
+Actor_01/03-01-03-02-01-01-01.wav  [happy -> Content]  predicted: FEA -> Anxious (conf=0.79) (WRONG)
+Actor_01/03-01-03-02-01-02-01.wav  [happy -> Content]  predicted: FEA -> Anxious (conf=0.90) (WRONG)
+Actor_01/03-01-03-02-02-02-01.wav  [happy -> Content]  predicted: ANG -> Stressed (conf=0.45) (WRONG)
+Actor_01/03-01-04-01-01-02-01.wav  [sad -> Anxious]  predicted: FEA -> Anxious (conf=0.91) (correct)
+Actor_01/03-01-04-01-02-02-01.wav  [sad -> Anxious]  predicted: NEU -> Calm (conf=0.80) (WRONG)
+Actor_01/03-01-04-02-02-02-01.wav  [sad -> Anxious]  predicted: FEA -> Anxious (conf=0.90) (correct)
+
+====================================================================================

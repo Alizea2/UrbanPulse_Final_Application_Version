@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "UrbanPulse",
+    "slug": "mobile_app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.mobile-app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0A1128",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-audio",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "UrbanPulse uses your location to place your soundscape reports on the community map."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "UrbanPulse uses your photo library to attach an environment photo to your soundscape report.",
+          "cameraPermission": "UrbanPulse uses your camera to capture a photo of your surroundings for your soundscape report."
+        }
+      ]
+    ]
+  }
+}

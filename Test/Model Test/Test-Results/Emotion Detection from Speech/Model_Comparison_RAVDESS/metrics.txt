@@ -1,0 +1,52 @@
+====================================================================================================
+Model Comparison — RAVDESS — Step 3: Emotion Detection from Speech
+Models: HuBERT SER | Yassmen (CREMA-D) | audEERING (dimensional) | GoEmotions (text baseline)
+All 4 evaluated on the same 500-clip seed=42 sample, none tested on its own training data
+====================================================================================================
+
+OVERALL SUMMARY
+----------------------------------------------------------------------------------------------------
+Model                           Accuracy   Precision    Recall        F1   Avg Time (ms)
+----------------------------------------------------------------------------------------------------
+HuBERT SER                         0.282       0.231     0.270     0.174             280
+Yassmen (CREMA-D)                  0.610       0.713     0.525     0.512             249
+audEERING (dimensional)            0.472       0.386     0.387     0.366             158
+GoEmotions (text baseline)         0.310       0.062     0.200     0.095              15
+----------------------------------------------------------------------------------------------------
+Ranked by F1: Yassmen (CREMA-D) (0.512) > audEERING (dimensional) (0.366) > HuBERT SER (0.174) > GoEmotions (text baseline) (0.095)
+----------------------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN (UrbanPulse wellbeing states)
+----------------------------------------------------------------------------------------------------
+
+Calm  (Support: 42)
+  HuBERT SER                 P=0.000  R=0.000  F1=0.000
+  Yassmen (CREMA-D)          P=0.636  R=0.333  F1=0.438
+  audEERING (dimensional)    P=0.472  R=0.658  F1=0.550
+  GoEmotions (text baseline) P=0.310  R=1.000  F1=0.473
+
+Content  (Support: 86)
+  HuBERT SER                 P=0.208  R=0.128  F1=0.158
+  Yassmen (CREMA-D)          P=1.000  R=0.140  F1=0.245
+  audEERING (dimensional)    P=0.359  R=0.609  F1=0.452
+  GoEmotions (text baseline) P=0.000  R=0.000  F1=0.000
+
+Anxious  (Support: 180)
+  HuBERT SER                 P=0.714  R=0.222  F1=0.339
+  Yassmen (CREMA-D)          P=0.623  R=0.900  F1=0.736
+  audEERING (dimensional)    P=0.469  R=0.275  F1=0.347
+  GoEmotions (text baseline) P=0.000  R=0.000  F1=0.000
+
+Stressed  (Support: 90)
+  HuBERT SER                 P=0.231  R=1.000  F1=0.375
+  Yassmen (CREMA-D)          P=0.500  R=0.889  F1=0.640
+  audEERING (dimensional)    P=0.628  R=0.391  F1=0.482
+  GoEmotions (text baseline) P=0.000  R=0.000  F1=0.000
+
+Annoyed  (Support: 102)
+  HuBERT SER                 P=0.000  R=0.000  F1=0.000
+  Yassmen (CREMA-D)          P=0.804  R=0.363  F1=0.500
+  audEERING (dimensional)    P=0.000  R=0.000  F1=0.000
+  GoEmotions (text baseline) P=0.000  R=0.000  F1=0.000
+
+====================================================================================================

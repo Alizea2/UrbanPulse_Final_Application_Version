@@ -1,0 +1,57 @@
+====================================================================================
+Distil-Whisper (distil-whisper/distil-small.en) on LibriSpeech test-clean — Step 2: Voice Note Transcription
+====================================================================================
+
+SUMMARY
+------------------------------------------------------------------------------------
+WER (Word Error Rate)  : 0.0366   (3.66% of words wrong)
+CER (Character Error Rate): 0.0157   (1.57% of characters wrong)
+Perfect transcriptions : 335/500   (67.0% exact match after normalization)
+Avg Time               : 957 ms per clip
+Clips evaluated        : 500
+------------------------------------------------------------------------------------
+
+WORST 10 CLIPS BY WER (for qualitative error inspection)
+------------------------------------------------------------------------------------
+
+8224-274381-0001  (WER=0.85)
+  REF: among other persons of distinction who united themselves to him was lord napier of merchiston son of the famous inventor of the logarithms the person to whom the title of a great man is more justly due than to any other whom his country ever produced
+  HYP: among other whom his country ever produced
+
+7176-92135-0027  (WER=0.75)
+  REF: lady larkspur starts suddenly and turns towards him
+  HYP: lady lark is birth suddenly interns toward him
+
+2830-3980-0026  (WER=0.50)
+  REF: verse 2
+  HYP: 1st 2
+
+3575-170457-0016  (WER=0.50)
+  REF: farewell madam
+  HYP: farewell madame
+
+7176-92135-0020  (WER=0.45)
+  REF: 9923 elsinore 99 yes hallo is that you horatio hamlet speaking
+  HYP: double 923 elsinore double not yes hello is that you horatio hamlet speaking
+
+6829-68769-0017  (WER=0.44)
+  REF: worse tom worse n ever replied the jailer gloomily
+  HYP: worst time worse an error replied the jailer gloomily
+
+237-134493-0007  (WER=0.40)
+  REF: alexandra lets you sleep late
+  HYP: alexandra that is you sleep late
+
+7021-85628-0017  (WER=0.40)
+  REF: so it is said anders
+  HYP: so it is senanders
+
+8455-210777-0012  (WER=0.40)
+  REF: missus neverbend you must indeed be proud of your son
+  HYP: miss has never been you must indeed be proud of your son
+
+1995-1826-0003  (WER=0.33)
+  REF: better go he had counseled sententiously
+  HYP: better go he had counsels intentiously
+
+====================================================================================

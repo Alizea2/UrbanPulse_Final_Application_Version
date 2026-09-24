@@ -1,0 +1,40 @@
+# ---- Dependencies -------------------------------------------------------
+node_modules/
+*.egg-info/
+.venv/
+venv/
+tf_env/
+
+# ---- Python bytecode / caches ------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# ---- Evaluation datasets ------------------------------------------------
+# Not redistributable. SONYC-UST, RAVDESS, LibriSpeech and Places365 are
+# obtained from their own providers under their own licences; Places365 in
+# particular forbids redistribution of its images. ~2 GB total.
+Test/Model Test/Datasets/
+
+# ---- Runtime data -------------------------------------------------------
+# Created on first run; contains diary entries and map pins.
+urbanpulse.db
+*.sqlite
+*.sqlite3
+
+# ---- Editor / OS --------------------------------------------------------
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ---- Local build output -------------------------------------------------
+.expo/
+dist/
+build/
+*.log
+
+# ---- Auto-downloaded model weights --------------------------------------
+# efficientat_src downloads checkpoints here on first run (model_dir="resources").
+resources/

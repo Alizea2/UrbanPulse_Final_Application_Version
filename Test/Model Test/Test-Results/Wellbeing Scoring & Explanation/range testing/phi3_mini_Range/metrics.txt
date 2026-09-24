@@ -1,0 +1,39 @@
+==========================================================================================
+Range-Matching Evaluation — phi3:mini — Step 4: Wellbeing Scoring & Explanation
+==========================================================================================
+
+Grades each of the 115 wellbeing_eval_set_4input.csv rows: is the model's predicted score
+within that row's [acceptable_score_min, acceptable_score_max] range?
+
+------------------------------------------------------------------------------------------
+SUMMARY
+------------------------------------------------------------------------------------------
+In-range accuracy : 0.3913  (45/115 rows)
+Mean miss distance (rows outside range only): 0.1186
+------------------------------------------------------------------------------------------
+
+PER-EMOTION BREAKDOWN
+------------------------------------------------------------------------------------------
+Emotion         In-range     Total    Accuracy
+------------------------------------------------------------------------------------------
+Calm                   8        23       0.348
+Content               10        23       0.435
+Anxious               12        23       0.522
+Stressed               4        23       0.174
+Annoyed               11        23       0.478
+------------------------------------------------------------------------------------------
+
+WORST 10 MISSES (largest miss distance)
+------------------------------------------------------------------------------------------
+  #19   rock-drill                  Stressed  a train station or airport predicted=0.59  range=[0.00, 0.18]  miss=0.41
+  #23   jackhammer                  Anxious   a forest or wooded area  predicted=0.67  range=[0.10, 0.30]  miss=0.37
+  #86   ice-cream-truck             Calm      a forest or wooded area  predicted=0.32  range=[0.68, 0.88]  miss=0.36
+  #16   rock-drill                  Calm      a home interior          predicted=0.98  range=[0.47, 0.67]  miss=0.31
+  #41   chainsaw                    Calm      a parking lot            predicted=0.89  range=[0.42, 0.62]  miss=0.27
+  #39   non-machinery-impact        Stressed  a playground             predicted=0.55  range=[0.09, 0.29]  miss=0.26
+  #17   rock-drill                  Content   a school or university campus predicted=0.93  range=[0.47, 0.67]  miss=0.26
+  #45   chainsaw                    Annoyed   a beach or waterfront    predicted=0.60  range=[0.14, 0.34]  miss=0.26
+  #7    medium-sounding-engine      Content   a residential street     predicted=0.26  range=[0.50, 0.70]  miss=0.24
+  #92   person-or-small-group-talkingContent   a quiet alley            predicted=0.45  range=[0.69, 0.89]  miss=0.24
+
+==========================================================================================

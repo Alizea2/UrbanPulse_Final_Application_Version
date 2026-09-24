@@ -1,0 +1,42 @@
+====================================================================================
+E-PANNs (top-3) on SONYC-UST — Step 1: Sound Classification (23 fine-grained classes)
+====================================================================================
+
+SUMMARY
+------------------------------------------------------------------------------------
+Accuracy   : 0.975   (correct yes/no decisions, out of all checked)
+Precision  : 0.207   (average trustworthiness across all sound types)
+Recall     : 0.087   (average how much it actually catches)
+F1         : 0.107   (combined precision+recall score)
+AUC        : 0.798   (how well it ranks "present" above "absent", any cutoff)
+Avg Time   : 94 ms per clip   (how long one classification took, on average)
+------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN
+------------------------------------------------------------------------------------
+Class                                Precision      Recall          F1       AUC Support
+------------------------------------------------------------------------------------
+small-sounding-engine                    0.000       0.000       0.000     0.665       1
+medium-sounding-engine                   0.000       0.000       0.000     0.585      41
+large-sounding-engine                    0.000       0.000       0.000     0.769      50
+rock-drill                               0.000       0.000       0.000       N/A       0
+jackhammer                               1.000       0.333       0.500     0.983       3
+hoe-ram                                  0.000       0.000       0.000       N/A       0  [no mapping]
+pile-driver                              0.000       0.000       0.000       N/A       0  [no mapping]
+non-machinery-impact                     0.000       0.000       0.000     0.657      51
+chainsaw                                 0.000       0.000       0.000       N/A       0
+small-medium-rotating-saw                0.000       0.000       0.000       N/A       0
+large-rotating-saw                       0.000       0.000       0.000       N/A       0  [no mapping]
+car-horn                                 0.923       0.185       0.308     0.802      65
+car-alarm                                0.000       0.000       0.000     0.995       1
+siren                                    0.846       0.440       0.579     0.805      25
+reverse-beeper                           0.222       0.200       0.211     0.849      10
+stationary-music                         0.000       0.000       0.000       N/A      18  [no mapping]
+mobile-music                             0.000       0.000       0.000       N/A       1  [no mapping]
+ice-cream-truck                          0.000       0.000       0.000       N/A       0
+person-or-small-group-talking            0.774       0.785       0.780     0.901     223
+person-or-small-group-shouting           0.000       0.000       0.000     0.756      14
+large-crowd                              0.000       0.000       0.000       N/A       0
+amplified-speech                         0.000       0.000       0.000       N/A       0  [no mapping]
+dog-barking-whining                      1.000       0.048       0.091     0.804      21
+====================================================================================

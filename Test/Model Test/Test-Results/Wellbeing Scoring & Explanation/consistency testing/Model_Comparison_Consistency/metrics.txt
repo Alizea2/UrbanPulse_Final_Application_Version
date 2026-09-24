@@ -1,0 +1,23 @@
+====================================================================================================
+Model Comparison — Property-Based Consistency — Step 4: Wellbeing Scoring & Explanation
+Models: Phi-3-mini | gemma2:2b | qwen2.5:3b | llama3.2:3b
+(Mistral 7B and the originally-planned Qwen2.5-7B/Gemma2-9B dropped: too large for this
+ machine's ~7.5GB RAM — Mistral 7B was confirmed to hang/thrash rather than complete.)
+====================================================================================================
+
+OVERALL SUMMARY
+----------------------------------------------------------------------------------------------------
+Model                Sound rho   Emotion rho    Retest stdev   Extremes pass
+----------------------------------------------------------------------------------------------------
+Phi-3-mini              0.9137        0.8944          0.0000          100.0%
+gemma2:2b               0.1741        0.6325          0.0000           16.7%
+qwen2.5:3b              0.6633        0.8660          0.0000           83.3%
+llama3.2:3b            -0.2895        0.7000          0.0000           50.0%
+----------------------------------------------------------------------------------------------------
+Ranked (by extremes pass rate, then combined rank correlation, then reliability):
+  1. Phi-3-mini — extremes=100%, sound_rho=0.914, emotion_rho=0.894, retest_stdev=0.0000
+  2. qwen2.5:3b — extremes=83%, sound_rho=0.663, emotion_rho=0.866, retest_stdev=0.0000
+  3. llama3.2:3b — extremes=50%, sound_rho=-0.289, emotion_rho=0.700, retest_stdev=0.0000
+  4. gemma2:2b — extremes=17%, sound_rho=0.174, emotion_rho=0.632, retest_stdev=0.0000
+
+====================================================================================================

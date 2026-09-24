@@ -1,0 +1,52 @@
+====================================================================================
+GoEmotions (text-based, production Step 2 pipeline) on RAVDESS
+Step 3: Emotion Detection from Speech — baseline comparison
+====================================================================================
+
+SUMMARY (UrbanPulse 5-state mapping)
+------------------------------------------------------------------------------------
+Accuracy   : 0.3100   (31.00% of clips correctly classified)
+Precision  : 0.0620   (macro — average trustworthiness across all 5 states)
+Recall     : 0.2000   (macro — average how much it actually catches)
+F1         : 0.0947   (combined precision+recall score)
+Avg Time   : 15 ms per clip
+Clips evaluated: 500  (all 8 RAVDESS emotions usable — text is content-based, not audio-limited)
+------------------------------------------------------------------------------------
+NOTE: GoEmotions sees only the FIXED, EMOTION-NEUTRAL SENTENCE TEXT ("Kids/Dogs are talking/sitting by the door."), never the audio. Every clip of the same statement gets the exact SAME text, so GoEmotions predicts the SAME emotion for every actor and every true emotion sharing a statement — it produced only 1 distinct predicted state(s) across all 500 clips. This is the best case for this approach (a real transcription model could only add error on top). The gap below the dedicated audio models (HuBERT/Yassmen/audEERING) is the expected, real finding: text content carries no information about how a sentence was actually spoken.
+------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN
+------------------------------------------------------------------------------------
+UrbanPulse State       Precision      Recall          F1   Support
+------------------------------------------------------------------------------------
+Calm                       0.310       1.000       0.473       155
+Content                    0.000       0.000       0.000        69
+Anxious                    0.000       0.000       0.000       145
+Stressed                   0.000       0.000       0.000        71
+Annoyed                    0.000       0.000       0.000        60
+------------------------------------------------------------------------------------
+
+CONFUSION MATRIX (rows = true RAVDESS emotion mapped to UrbanPulse state, columns = predicted)
+------------------------------------------------------------------------------------
+True \ Pred       Calm   Content   Anxious  Stressed   Annoyed
+Calm               155         0         0         0         0
+Content             69         0         0         0         0
+Anxious            145         0         0         0         0
+Stressed            71         0         0         0         0
+Annoyed             60         0         0         0         0
+------------------------------------------------------------------------------------
+
+SAMPLE PREDICTIONS (first 10 clips, for qualitative inspection)
+------------------------------------------------------------------------------------
+Actor_01/03-01-01-01-01-02-01.wav  [neutral -> Calm]  text="Kids are talking by the door."  predicted: neutral -> Calm (conf=0.97) (correct)
+Actor_01/03-01-02-01-01-01-01.wav  [calm -> Calm]  text="Kids are talking by the door."  predicted: neutral -> Calm (conf=0.97) (correct)
+Actor_01/03-01-02-01-02-01-01.wav  [calm -> Calm]  text="Dogs are sitting by the door."  predicted: neutral -> Calm (conf=0.97) (correct)
+Actor_01/03-01-02-01-02-02-01.wav  [calm -> Calm]  text="Dogs are sitting by the door."  predicted: neutral -> Calm (conf=0.97) (correct)
+Actor_01/03-01-03-01-01-02-01.wav  [happy -> Content]  text="Kids are talking by the door."  predicted: neutral -> Calm (conf=0.97) (WRONG)
+Actor_01/03-01-03-01-02-01-01.wav  [happy -> Content]  text="Dogs are sitting by the door."  predicted: neutral -> Calm (conf=0.97) (WRONG)
+Actor_01/03-01-03-02-01-01-01.wav  [happy -> Content]  text="Kids are talking by the door."  predicted: neutral -> Calm (conf=0.97) (WRONG)
+Actor_01/03-01-03-02-02-02-01.wav  [happy -> Content]  text="Dogs are sitting by the door."  predicted: neutral -> Calm (conf=0.97) (WRONG)
+Actor_01/03-01-04-01-02-02-01.wav  [sad -> Anxious]  text="Dogs are sitting by the door."  predicted: neutral -> Calm (conf=0.97) (WRONG)
+Actor_01/03-01-05-01-01-01-01.wav  [angry -> Stressed]  text="Kids are talking by the door."  predicted: neutral -> Calm (conf=0.97) (WRONG)
+
+====================================================================================

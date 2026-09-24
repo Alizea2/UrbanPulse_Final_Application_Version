@@ -1,0 +1,16 @@
+UrbanPulse Functionality Test Results
+
+FT-1   Sound Classification                              PASS
+FT-2   Scene Classification                               PASS
+FT-3   Voice Emotion Analysis (transcription + emotion)    PASS
+FT-4   AI Wellbeing Scoring                                PASS
+FT-5   Diary Entry (save + retrieve)                       PASS
+FT-6   Diary Insight Generation                            PASS
+FT-7   Community Emotion Map (pin save + retrieve)         PASS
+FT-8   Sound Hunt (matching sound completes challenge)     PASS
+FT-9   Sound Hunt (non-matching sound is rejected)         PASS
+FT-10  Backend Unreachable (graceful failure)              PASS
+FT-11  Quiet Spot Finder (filters pins by wellbeing score)  PASS
+FT-12  Invalid Input Handling (missing fields return clean 400s)  PASS
+
+12/12 passed

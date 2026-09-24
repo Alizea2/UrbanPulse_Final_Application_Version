@@ -1,0 +1,57 @@
+====================================================================================
+wav2vec2-large (facebook/wav2vec2-large-960h-lv60-self) on LibriSpeech test-clean — Step 2: Voice Note Transcription
+====================================================================================
+
+SUMMARY
+------------------------------------------------------------------------------------
+WER (Word Error Rate)  : 0.0160   (1.60% of words wrong)
+CER (Character Error Rate): 0.0051   (0.51% of characters wrong)
+Perfect transcriptions : 405/500   (81.0% exact match after normalization)
+Avg Time               : 520 ms per clip
+Clips evaluated        : 500
+------------------------------------------------------------------------------------
+
+WORST 10 CLIPS BY WER (for qualitative error inspection)
+------------------------------------------------------------------------------------
+
+3575-170457-0016  (WER=0.50)
+  REF: farewell madam
+  HYP: farewell madame
+
+7176-92135-0020  (WER=0.36)
+  REF: 9923 elsinore 99 yes hallo is that you horatio hamlet speaking
+  HYP: 9923 elsinore double not yes hello is that you horatio pamlet speaking
+
+2094-142345-0024  (WER=0.33)
+  REF: munny my iron is twite told pease put it down to warm
+  HYP: money my irons twite told please put it down to warm
+
+3729-6852-0016  (WER=0.29)
+  REF: madame quinson besides can answer your enquiries
+  HYP: madame quincan besides can answer your inquiries
+
+61-70970-0010  (WER=0.27)
+  REF: dismiss your squire robin and bid me good e e n
+  HYP: dismiss your squire robin and bid me good even
+
+1580-141083-0049  (WER=0.22)
+  REF: anyone in the room could get out yes sir
+  HYP: any one in the room could get out yes sir
+
+4507-16021-0001  (WER=0.20)
+  REF: it engenders a whole world la pegre for which read theft and a hell la pegrenne for which read hunger
+  HYP: it engenders a whole world la pegre for which red theft and a hel la pegren for which red hunger
+
+7127-75947-0023  (WER=0.18)
+  REF: it is too difficult replied mademoiselle de tonnay charente laughing loudly
+  HYP: it is too difficult replied mademoiselle de tonecharent laughing loudly
+
+7127-75946-0005  (WER=0.17)
+  REF: what do you mean inquired louis
+  HYP: what do you mean inquired louise
+
+4992-41797-0001  (WER=0.16)
+  REF: well as i say it is an awful queer world they clap all the burglars into jail and the murderers and the wife beaters i have allers thought a gentle reproof would be enough punishment for a wife beater cause he probably has a lot 0 provocation that nobody knows and the firebugs can not think 0 the right name something like cendenaries an the breakers 0 the peace an what not an yet the law has nothin to say to a man like hen lord
+  HYP: well as i say it is an awful queer world they clap all the burglars in jail and the murderers and the wife beaters i allars thought a general reproof would be enough punishment for a wife beater cause he probably has a lot of provocation that nobody knows and the fire bugs can not think of the right name something like ncendiares and the breakers of the peace and what not and yet the law has nothing to say to a man like hen lord
+
+====================================================================================

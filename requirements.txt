@@ -1,0 +1,12 @@
+flask
+flask-cors
+pydub
+transformers
+torch
+librosa
+requests
+pillow
+pillow-heif
+numpy
+huggingface_hub
+safetensors

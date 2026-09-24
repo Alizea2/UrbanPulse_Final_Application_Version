@@ -1,0 +1,69 @@
+=== Sound Classification (EfficientAT) — /api/analyze, n=8 ===
+    run 1/8: 0.322s
+    run 2/8: 0.090s
+    run 3/8: 0.086s
+    run 4/8: 0.085s
+    run 5/8: 0.086s
+    run 6/8: 0.085s
+    run 7/8: 0.084s
+    run 8/8: 0.085s
+
+Sound Classification (EfficientAT): mean=0.116s  min=0.084s  max=0.322s  p95=0.322s
+
+=== Scene Classification (CLIP) — /api/scene, n=8 ===
+    run 1/8: 0.879s
+    run 2/8: 0.078s
+    run 3/8: 0.070s
+    run 4/8: 0.068s
+    run 5/8: 0.067s
+    run 6/8: 0.065s
+    run 7/8: 0.067s
+    run 8/8: 0.069s
+
+Scene Classification (CLIP): mean=0.170s  min=0.065s  max=0.879s  p95=0.879s
+
+=== Transcription + Emotion (wav2vec2 + SER) — /api/transcribe, n=8 ===
+    run 1/8: 2.696s
+    run 2/8: 2.977s
+    run 3/8: 3.846s
+    run 4/8: 3.853s
+    run 5/8: 2.441s
+    run 6/8: 2.454s
+    run 7/8: 1.251s
+    run 8/8: 0.921s
+
+Transcription + Emotion (wav2vec2 x2): mean=2.555s  min=0.921s  max=3.853s  p95=3.853s
+
+=== Wellbeing Scoring (Qwen2.5) — /api/wellbeing, n=8 ===
+    run 1/8: 9.047s
+    run 2/8: 2.559s
+    run 3/8: 2.877s
+    run 4/8: 2.715s
+    run 5/8: 2.749s
+    run 6/8: 3.227s
+    run 7/8: 2.601s
+    run 8/8: 2.648s
+
+Wellbeing Scoring (Qwen2.5): mean=3.553s  min=2.559s  max=9.047s  p95=9.047s
+
+=== End-to-end pipeline (sequential: analyze -> scene -> transcribe -> wellbeing) ===
+    run 1/8: 8.225s
+    run 2/8: 7.090s
+    run 3/8: 7.744s
+    run 4/8: 7.231s
+    run 5/8: 8.389s
+    run 6/8: 7.502s
+    run 7/8: 7.668s
+    run 8/8: 7.045s
+
+End-to-end pipeline (sequential): mean=7.612s  min=7.045s  max=8.389s  p95=8.389s
+
+
+
+===== SUMMARY =====
+Stage                                           Mean (s)    Min (s)    Max (s)    P95 (s)
+Sound Classification (EfficientAT)                 0.116      0.084      0.322      0.322
+Scene Classification (CLIP)                        0.170      0.065      0.879      0.879
+Transcription + Emotion (wav2vec2 x2)              2.555      0.921      3.853      3.853
+Wellbeing Scoring (Qwen2.5)                        3.553      2.559      9.047      9.047
+End-to-end pipeline (sequential)                   7.612      7.045      8.389      8.389

@@ -1,0 +1,47 @@
+====================================================================================================
+Yassmen FEA/SAD Logit-Bias Calibration Sweep — RAVDESS — Step 3: Emotion Detection
+====================================================================================================
+
+Why: production usage showed predictions skewing toward 'Anxious', which receives BOTH
+FEA and SAD (Yassmen's two native labels covering fear/sadness), giving it structurally
+double the chance of being the argmax vs. every other UrbanPulse state (single label each).
+
+----------------------------------------------------------------------------------------------------
+    Bias    Accuracy     Macro P     Macro R    Macro F1   Prediction distribution
+----------------------------------------------------------------------------------------------------
+    0.00      0.6100      0.7128      0.5249      0.5118   Calm=22, Content=12, Anxious=260, Stressed=160, Annoyed=46
+   -0.30      0.6180      0.7191      0.5373      0.5242   Calm=23, Content=13, Anxious=250, Stressed=167, Annoyed=47
+   -0.50      0.6180      0.7193      0.5384      0.5243   Calm=23, Content=13, Anxious=246, Stressed=171, Annoyed=47
+   -0.70      0.6220      0.7172      0.5490      0.5323   Calm=27, Content=13, Anxious=240, Stressed=173, Annoyed=47
+   -1.00      0.6280      0.7212      0.5609      0.5453   Calm=28, Content=14, Anxious=227, Stressed=180, Annoyed=51
+   -1.50      0.6240      0.7096      0.5705      0.5491   Calm=34, Content=15, Anxious=209, Stressed=190, Annoyed=52
+   -2.00      0.6200      0.6898      0.5761      0.5595   Calm=35, Content=21, Anxious=188, Stressed=198, Annoyed=58
+   -2.50      0.6040      0.6638      0.5733      0.5561   Calm=36, Content=25, Anxious=166, Stressed=208, Annoyed=65
+   -3.00      0.5920      0.6592      0.5787      0.5612   Calm=39, Content=29, Anxious=146, Stressed=215, Annoyed=71
+   -4.00      0.5480      0.6437      0.5761      0.5504   Calm=43, Content=40, Anxious=91, Stressed=238, Annoyed=88
+   -5.00      0.4700      0.6008      0.5425      0.4868   Calm=45, Content=59, Anxious=38, Stressed=256, Annoyed=102
+----------------------------------------------------------------------------------------------------
+
+BEST by macro F1: bias=-3.00  (macro F1=0.5612, vs baseline bias=0.00 macro F1=0.5118)
+
+PER-CLASS BREAKDOWN AT BEST BIAS
+----------------------------------------------------------------------------------------------------
+UrbanPulse State       Precision      Recall          F1   Support
+----------------------------------------------------------------------------------------------------
+Calm                       0.590       0.548       0.568        42
+Content                    0.897       0.302       0.452        86
+Anxious                    0.795       0.644       0.712       180
+Stressed                   0.409       0.978       0.577        90
+Annoyed                    0.606       0.422       0.497       102
+----------------------------------------------------------------------------------------------------
+
+PER-CLASS BREAKDOWN AT BASELINE (bias=0.00, current production behavior)
+----------------------------------------------------------------------------------------------------
+UrbanPulse State       Precision      Recall          F1   Support
+----------------------------------------------------------------------------------------------------
+Calm                       0.636       0.333       0.438        42
+Content                    1.000       0.140       0.245        86
+Anxious                    0.623       0.900       0.736       180
+Stressed                   0.500       0.889       0.640        90
+Annoyed                    0.804       0.363       0.500       102
+====================================================================================================
