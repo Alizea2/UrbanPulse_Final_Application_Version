@@ -1,0 +1,116 @@
+id,sound_label,emotion,transcript,acceptable_score_min,acceptable_score_max
+1,small-sounding-engine,Calm,This spot is really peaceful right now.,0.58,0.78
+2,small-sounding-engine,Content,"Everything's going well, I'm in a good mood.",0.60,0.80
+3,small-sounding-engine,Anxious,"My heart's racing a little, not sure what's going on.",0.30,0.50
+4,small-sounding-engine,Stressed,"I'm so behind on everything today, this is a lot.",0.23,0.43
+5,small-sounding-engine,Annoyed,"Can this just stop already, I've had enough.",0.28,0.48
+6,medium-sounding-engine,Calm,"Taking a slow walk, nothing much going on.",0.52,0.72
+7,medium-sounding-engine,Content,Just relaxing and enjoying the day so far.,0.55,0.75
+8,medium-sounding-engine,Anxious,"I don't know, I'm feeling a bit on edge right now.",0.25,0.45
+9,medium-sounding-engine,Stressed,"I really need this to be over, I can't focus.",0.18,0.38
+10,medium-sounding-engine,Annoyed,I'm getting pretty fed up with this whole thing.,0.23,0.43
+11,large-sounding-engine,Calm,"It's a quiet afternoon, feels nice out here.",0.46,0.66
+12,large-sounding-engine,Content,Had a great coffee and I'm feeling good today.,0.49,0.69
+13,large-sounding-engine,Anxious,Something about this street is making me uneasy.,0.19,0.39
+14,large-sounding-engine,Stressed,Everything is piling up and I just need a minute.,0.12,0.32
+15,large-sounding-engine,Annoyed,"This is so annoying, I just want some quiet.",0.17,0.37
+16,rock-drill,Calm,I'm just sitting outside enjoying some fresh air.,0.37,0.57
+17,rock-drill,Content,This is honestly a really nice moment right now.,0.40,0.60
+18,rock-drill,Anxious,"I keep looking around, not sure why I'm nervous.",0.10,0.30
+19,rock-drill,Stressed,I'm running late and nothing is going right.,0.02,0.22
+20,rock-drill,Annoyed,Honestly this is getting really irritating now.,0.07,0.27
+21,jackhammer,Calm,This spot is really peaceful right now.,0.36,0.56
+22,jackhammer,Content,"Everything's going well, I'm in a good mood.",0.39,0.59
+23,jackhammer,Anxious,"My heart's racing a little, not sure what's going on.",0.09,0.29
+24,jackhammer,Stressed,"I'm so behind on everything today, this is a lot.",0.01,0.21
+25,jackhammer,Annoyed,"Can this just stop already, I've had enough.",0.07,0.27
+26,hoe-ram,Calm,"Taking a slow walk, nothing much going on.",0.37,0.57
+27,hoe-ram,Content,Just relaxing and enjoying the day so far.,0.40,0.60
+28,hoe-ram,Anxious,"I don't know, I'm feeling a bit on edge right now.",0.10,0.30
+29,hoe-ram,Stressed,"I really need this to be over, I can't focus.",0.02,0.22
+30,hoe-ram,Annoyed,I'm getting pretty fed up with this whole thing.,0.07,0.27
+31,pile-driver,Calm,"It's a quiet afternoon, feels nice out here.",0.36,0.56
+32,pile-driver,Content,Had a great coffee and I'm feeling good today.,0.39,0.59
+33,pile-driver,Anxious,Something about this street is making me uneasy.,0.09,0.29
+34,pile-driver,Stressed,Everything is piling up and I just need a minute.,0.01,0.21
+35,pile-driver,Annoyed,"This is so annoying, I just want some quiet.",0.07,0.27
+36,non-machinery-impact,Calm,I'm just sitting outside enjoying some fresh air.,0.50,0.70
+37,non-machinery-impact,Content,This is honestly a really nice moment right now.,0.52,0.72
+38,non-machinery-impact,Anxious,"I keep looking around, not sure why I'm nervous.",0.22,0.42
+39,non-machinery-impact,Stressed,I'm running late and nothing is going right.,0.15,0.35
+40,non-machinery-impact,Annoyed,Honestly this is getting really irritating now.,0.20,0.40
+41,chainsaw,Calm,This spot is really peaceful right now.,0.40,0.60
+42,chainsaw,Content,"Everything's going well, I'm in a good mood.",0.43,0.63
+43,chainsaw,Anxious,"My heart's racing a little, not sure what's going on.",0.12,0.32
+44,chainsaw,Stressed,"I'm so behind on everything today, this is a lot.",0.05,0.25
+45,chainsaw,Annoyed,"Can this just stop already, I've had enough.",0.10,0.30
+46,small-medium-rotating-saw,Calm,"Taking a slow walk, nothing much going on.",0.43,0.63
+47,small-medium-rotating-saw,Content,Just relaxing and enjoying the day so far.,0.45,0.65
+48,small-medium-rotating-saw,Anxious,"I don't know, I'm feeling a bit on edge right now.",0.15,0.35
+49,small-medium-rotating-saw,Stressed,"I really need this to be over, I can't focus.",0.07,0.27
+50,small-medium-rotating-saw,Annoyed,I'm getting pretty fed up with this whole thing.,0.13,0.33
+51,large-rotating-saw,Calm,"It's a quiet afternoon, feels nice out here.",0.40,0.60
+52,large-rotating-saw,Content,Had a great coffee and I'm feeling good today.,0.43,0.63
+53,large-rotating-saw,Anxious,Something about this street is making me uneasy.,0.12,0.32
+54,large-rotating-saw,Stressed,Everything is piling up and I just need a minute.,0.05,0.25
+55,large-rotating-saw,Annoyed,"This is so annoying, I just want some quiet.",0.10,0.30
+56,car-horn,Calm,I'm just sitting outside enjoying some fresh air.,0.43,0.63
+57,car-horn,Content,This is honestly a really nice moment right now.,0.45,0.65
+58,car-horn,Anxious,"I keep looking around, not sure why I'm nervous.",0.15,0.35
+59,car-horn,Stressed,I'm running late and nothing is going right.,0.07,0.27
+60,car-horn,Annoyed,Honestly this is getting really irritating now.,0.13,0.33
+61,car-alarm,Calm,This spot is really peaceful right now.,0.40,0.60
+62,car-alarm,Content,"Everything's going well, I'm in a good mood.",0.43,0.63
+63,car-alarm,Anxious,"My heart's racing a little, not sure what's going on.",0.12,0.32
+64,car-alarm,Stressed,"I'm so behind on everything today, this is a lot.",0.05,0.25
+65,car-alarm,Annoyed,"Can this just stop already, I've had enough.",0.10,0.30
+66,siren,Calm,"Taking a slow walk, nothing much going on.",0.37,0.57
+67,siren,Content,Just relaxing and enjoying the day so far.,0.40,0.60
+68,siren,Anxious,"I don't know, I'm feeling a bit on edge right now.",0.10,0.30
+69,siren,Stressed,"I really need this to be over, I can't focus.",0.02,0.22
+70,siren,Annoyed,I'm getting pretty fed up with this whole thing.,0.07,0.27
+71,reverse-beeper,Calm,"It's a quiet afternoon, feels nice out here.",0.45,0.65
+72,reverse-beeper,Content,Had a great coffee and I'm feeling good today.,0.47,0.67
+73,reverse-beeper,Anxious,Something about this street is making me uneasy.,0.18,0.38
+74,reverse-beeper,Stressed,Everything is piling up and I just need a minute.,0.10,0.30
+75,reverse-beeper,Annoyed,"This is so annoying, I just want some quiet.",0.15,0.35
+76,stationary-music,Calm,I'm just sitting outside enjoying some fresh air.,0.62,0.82
+77,stationary-music,Content,This is honestly a really nice moment right now.,0.65,0.85
+78,stationary-music,Anxious,"I keep looking around, not sure why I'm nervous.",0.35,0.55
+79,stationary-music,Stressed,I'm running late and nothing is going right.,0.28,0.48
+80,stationary-music,Annoyed,Honestly this is getting really irritating now.,0.32,0.52
+81,mobile-music,Calm,This spot is really peaceful right now.,0.60,0.80
+82,mobile-music,Content,"Everything's going well, I'm in a good mood.",0.63,0.83
+83,mobile-music,Anxious,"My heart's racing a little, not sure what's going on.",0.33,0.53
+84,mobile-music,Stressed,"I'm so behind on everything today, this is a lot.",0.25,0.45
+85,mobile-music,Annoyed,"Can this just stop already, I've had enough.",0.30,0.50
+86,ice-cream-truck,Calm,"Taking a slow walk, nothing much going on.",0.65,0.85
+87,ice-cream-truck,Content,Just relaxing and enjoying the day so far.,0.68,0.88
+88,ice-cream-truck,Anxious,"I don't know, I'm feeling a bit on edge right now.",0.37,0.57
+89,ice-cream-truck,Stressed,"I really need this to be over, I can't focus.",0.30,0.50
+90,ice-cream-truck,Annoyed,I'm getting pretty fed up with this whole thing.,0.35,0.55
+91,person-or-small-group-talking,Calm,"It's a quiet afternoon, feels nice out here.",0.65,0.85
+92,person-or-small-group-talking,Content,Had a great coffee and I'm feeling good today.,0.68,0.88
+93,person-or-small-group-talking,Anxious,Something about this street is making me uneasy.,0.37,0.57
+94,person-or-small-group-talking,Stressed,Everything is piling up and I just need a minute.,0.30,0.50
+95,person-or-small-group-talking,Annoyed,"This is so annoying, I just want some quiet.",0.35,0.55
+96,person-or-small-group-shouting,Calm,I'm just sitting outside enjoying some fresh air.,0.45,0.65
+97,person-or-small-group-shouting,Content,This is honestly a really nice moment right now.,0.47,0.67
+98,person-or-small-group-shouting,Anxious,"I keep looking around, not sure why I'm nervous.",0.18,0.38
+99,person-or-small-group-shouting,Stressed,I'm running late and nothing is going right.,0.10,0.30
+100,person-or-small-group-shouting,Annoyed,Honestly this is getting really irritating now.,0.15,0.35
+101,large-crowd,Calm,This spot is really peaceful right now.,0.52,0.72
+102,large-crowd,Content,"Everything's going well, I'm in a good mood.",0.55,0.75
+103,large-crowd,Anxious,"My heart's racing a little, not sure what's going on.",0.25,0.45
+104,large-crowd,Stressed,"I'm so behind on everything today, this is a lot.",0.18,0.38
+105,large-crowd,Annoyed,"Can this just stop already, I've had enough.",0.23,0.43
+106,amplified-speech,Calm,"Taking a slow walk, nothing much going on.",0.50,0.70
+107,amplified-speech,Content,Just relaxing and enjoying the day so far.,0.52,0.72
+108,amplified-speech,Anxious,"I don't know, I'm feeling a bit on edge right now.",0.22,0.42
+109,amplified-speech,Stressed,"I really need this to be over, I can't focus.",0.15,0.35
+110,amplified-speech,Annoyed,I'm getting pretty fed up with this whole thing.,0.20,0.40
+111,dog-barking-whining,Calm,"It's a quiet afternoon, feels nice out here.",0.50,0.70
+112,dog-barking-whining,Content,Had a great coffee and I'm feeling good today.,0.52,0.72
+113,dog-barking-whining,Anxious,Something about this street is making me uneasy.,0.22,0.42
+114,dog-barking-whining,Stressed,Everything is piling up and I just need a minute.,0.15,0.35
+115,dog-barking-whining,Annoyed,"This is so annoying, I just want some quiet.",0.20,0.40

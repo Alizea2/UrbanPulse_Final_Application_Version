@@ -1,0 +1,116 @@
+id,sound_label,emotion,transcript,scene_label,acceptable_score_min,acceptable_score_max
+1,small-sounding-engine,Calm,"This is such a nice spot, I'm really enjoying being here.",a garden,0.72,0.92
+2,small-sounding-engine,Content,"Things are pretty good right now, can't complain.",a forest or wooded area,0.73,0.93
+3,small-sounding-engine,Anxious,"It's fine here, nothing special either way.",a beach or waterfront,0.38,0.58
+4,small-sounding-engine,Stressed,I'm not really sure how I feel about this place.,a busy street,0.17,0.37
+5,small-sounding-engine,Annoyed,This is starting to get to me a little.,a traffic intersection,0.17,0.37
+6,medium-sounding-engine,Calm,"I'm getting pretty fed up, this is a lot to deal with.",a highway or motorway,0.38,0.58
+7,medium-sounding-engine,Content,"I really can't stand this anymore, it's awful here.",a residential street,0.50,0.70
+8,medium-sounding-engine,Anxious,"I am absolutely loving this moment, everything feels perfect.",a quiet alley,0.36,0.56
+9,medium-sounding-engine,Stressed,"This is such a nice spot, I'm really enjoying being here.",a market or bazaar,0.22,0.42
+10,medium-sounding-engine,Annoyed,"Things are pretty good right now, can't complain.",a shopping mall,0.24,0.44
+11,large-sounding-engine,Calm,"It's fine here, nothing special either way.",a café or restaurant,0.47,0.67
+12,large-sounding-engine,Content,I'm not really sure how I feel about this place.,a construction site,0.40,0.60
+13,large-sounding-engine,Anxious,This is starting to get to me a little.,an industrial area,0.07,0.27
+14,large-sounding-engine,Stressed,"I'm getting pretty fed up, this is a lot to deal with.",inside a building,0.06,0.26
+15,large-sounding-engine,Annoyed,"I really can't stand this anymore, it's awful here.",an office,0.08,0.28
+16,rock-drill,Calm,"I am absolutely loving this moment, everything feels perfect.",a home interior,0.47,0.67
+17,rock-drill,Content,"This is such a nice spot, I'm really enjoying being here.",a school or university campus,0.47,0.67
+18,rock-drill,Anxious,"Things are pretty good right now, can't complain.",a playground,0.16,0.36
+19,rock-drill,Stressed,"It's fine here, nothing special either way.",a train station or airport,0.00,0.18
+20,rock-drill,Annoyed,I'm not really sure how I feel about this place.,a parking lot,0.02,0.22
+21,jackhammer,Calm,This is starting to get to me a little.,a park,0.40,0.60
+22,jackhammer,Content,"I'm getting pretty fed up, this is a lot to deal with.",a garden,0.41,0.61
+23,jackhammer,Anxious,"I really can't stand this anymore, it's awful here.",a forest or wooded area,0.10,0.30
+24,jackhammer,Stressed,"I am absolutely loving this moment, everything feels perfect.",a beach or waterfront,0.19,0.39
+25,jackhammer,Annoyed,"This is such a nice spot, I'm really enjoying being here.",a busy street,0.08,0.28
+26,hoe-ram,Calm,"Things are pretty good right now, can't complain.",a traffic intersection,0.36,0.56
+27,hoe-ram,Content,"It's fine here, nothing special either way.",a highway or motorway,0.32,0.52
+28,hoe-ram,Anxious,I'm not really sure how I feel about this place.,a residential street,0.12,0.32
+29,hoe-ram,Stressed,This is starting to get to me a little.,a quiet alley,0.01,0.21
+30,hoe-ram,Annoyed,"I'm getting pretty fed up, this is a lot to deal with.",a market or bazaar,0.00,0.20
+31,pile-driver,Calm,"I really can't stand this anymore, it's awful here.",a shopping mall,0.26,0.46
+32,pile-driver,Content,"I am absolutely loving this moment, everything feels perfect.",a café or restaurant,0.49,0.69
+33,pile-driver,Anxious,"This is such a nice spot, I'm really enjoying being here.",a construction site,0.07,0.27
+34,pile-driver,Stressed,"Things are pretty good right now, can't complain.",an industrial area,0.00,0.18
+35,pile-driver,Annoyed,"It's fine here, nothing special either way.",inside a building,0.07,0.27
+36,non-machinery-impact,Calm,I'm not really sure how I feel about this place.,an office,0.49,0.69
+37,non-machinery-impact,Content,This is starting to get to me a little.,a home interior,0.49,0.69
+38,non-machinery-impact,Anxious,"I'm getting pretty fed up, this is a lot to deal with.",a school or university campus,0.17,0.37
+39,non-machinery-impact,Stressed,"I really can't stand this anymore, it's awful here.",a playground,0.09,0.29
+40,non-machinery-impact,Annoyed,"I am absolutely loving this moment, everything feels perfect.",a train station or airport,0.25,0.45
+41,chainsaw,Calm,"This is such a nice spot, I'm really enjoying being here.",a parking lot,0.42,0.62
+42,chainsaw,Content,"Things are pretty good right now, can't complain.",a park,0.55,0.75
+43,chainsaw,Anxious,"It's fine here, nothing special either way.",a garden,0.20,0.40
+44,chainsaw,Stressed,I'm not really sure how I feel about this place.,a forest or wooded area,0.13,0.33
+45,chainsaw,Annoyed,This is starting to get to me a little.,a beach or waterfront,0.14,0.34
+46,small-medium-rotating-saw,Calm,"I'm getting pretty fed up, this is a lot to deal with.",a busy street,0.32,0.52
+47,small-medium-rotating-saw,Content,"I really can't stand this anymore, it's awful here.",a traffic intersection,0.31,0.51
+48,small-medium-rotating-saw,Anxious,"I am absolutely loving this moment, everything feels perfect.",a highway or motorway,0.16,0.36
+49,small-medium-rotating-saw,Stressed,"This is such a nice spot, I'm really enjoying being here.",a residential street,0.17,0.37
+50,small-medium-rotating-saw,Annoyed,"Things are pretty good right now, can't complain.",a quiet alley,0.19,0.39
+51,large-rotating-saw,Calm,"It's fine here, nothing special either way.",a market or bazaar,0.38,0.58
+52,large-rotating-saw,Content,I'm not really sure how I feel about this place.,a shopping mall,0.39,0.59
+53,large-rotating-saw,Anxious,This is starting to get to me a little.,a café or restaurant,0.09,0.29
+54,large-rotating-saw,Stressed,"I'm getting pretty fed up, this is a lot to deal with.",a construction site,0.00,0.11
+55,large-rotating-saw,Annoyed,"I really can't stand this anymore, it's awful here.",an industrial area,0.00,0.14
+56,car-horn,Calm,"I am absolutely loving this moment, everything feels perfect.",inside a building,0.51,0.71
+57,car-horn,Content,"This is such a nice spot, I'm really enjoying being here.",an office,0.51,0.71
+58,car-horn,Anxious,"Things are pretty good right now, can't complain.",a home interior,0.20,0.40
+59,car-horn,Stressed,"It's fine here, nothing special either way.",a school or university campus,0.08,0.28
+60,car-horn,Annoyed,I'm not really sure how I feel about this place.,a playground,0.13,0.33
+61,car-alarm,Calm,This is starting to get to me a little.,a train station or airport,0.32,0.52
+62,car-alarm,Content,"I'm getting pretty fed up, this is a lot to deal with.",a parking lot,0.33,0.53
+63,car-alarm,Anxious,"I really can't stand this anymore, it's awful here.",a park,0.12,0.32
+64,car-alarm,Stressed,"I am absolutely loving this moment, everything feels perfect.",a garden,0.22,0.42
+65,car-alarm,Annoyed,"This is such a nice spot, I'm really enjoying being here.",a forest or wooded area,0.25,0.45
+66,siren,Calm,"Things are pretty good right now, can't complain.",a beach or waterfront,0.50,0.70
+67,siren,Content,"It's fine here, nothing special either way.",a busy street,0.35,0.55
+68,siren,Anxious,I'm not really sure how I feel about this place.,a traffic intersection,0.03,0.23
+69,siren,Stressed,This is starting to get to me a little.,a highway or motorway,0.00,0.10
+70,siren,Annoyed,"I'm getting pretty fed up, this is a lot to deal with.",a residential street,0.04,0.24
+71,reverse-beeper,Calm,"I really can't stand this anymore, it's awful here.",a quiet alley,0.39,0.59
+72,reverse-beeper,Content,"I am absolutely loving this moment, everything feels perfect.",a market or bazaar,0.54,0.74
+73,reverse-beeper,Anxious,"This is such a nice spot, I'm really enjoying being here.",a shopping mall,0.21,0.41
+74,reverse-beeper,Stressed,"Things are pretty good right now, can't complain.",a café or restaurant,0.15,0.35
+75,reverse-beeper,Annoyed,"It's fine here, nothing special either way.",a construction site,0.07,0.27
+76,stationary-music,Calm,I'm not really sure how I feel about this place.,an industrial area,0.54,0.74
+77,stationary-music,Content,This is starting to get to me a little.,inside a building,0.61,0.81
+78,stationary-music,Anxious,"I'm getting pretty fed up, this is a lot to deal with.",an office,0.29,0.49
+79,stationary-music,Stressed,"I really can't stand this anymore, it's awful here.",a home interior,0.20,0.40
+80,stationary-music,Annoyed,"I am absolutely loving this moment, everything feels perfect.",a school or university campus,0.43,0.63
+81,mobile-music,Calm,"This is such a nice spot, I'm really enjoying being here.",a playground,0.68,0.88
+82,mobile-music,Content,"Things are pretty good right now, can't complain.",a train station or airport,0.63,0.83
+83,mobile-music,Anxious,"It's fine here, nothing special either way.",a parking lot,0.29,0.49
+84,mobile-music,Stressed,I'm not really sure how I feel about this place.,a park,0.32,0.52
+85,mobile-music,Annoyed,This is starting to get to me a little.,a garden,0.34,0.54
+86,ice-cream-truck,Calm,"I'm getting pretty fed up, this is a lot to deal with.",a forest or wooded area,0.68,0.88
+87,ice-cream-truck,Content,"I really can't stand this anymore, it's awful here.",a beach or waterfront,0.68,0.88
+88,ice-cream-truck,Anxious,"I am absolutely loving this moment, everything feels perfect.",a busy street,0.41,0.61
+89,ice-cream-truck,Stressed,"This is such a nice spot, I'm really enjoying being here.",a traffic intersection,0.30,0.50
+90,ice-cream-truck,Annoyed,"Things are pretty good right now, can't complain.",a highway or motorway,0.31,0.51
+91,person-or-small-group-talking,Calm,"It's fine here, nothing special either way.",a residential street,0.68,0.88
+92,person-or-small-group-talking,Content,I'm not really sure how I feel about this place.,a quiet alley,0.69,0.89
+93,person-or-small-group-talking,Anxious,This is starting to get to me a little.,a market or bazaar,0.31,0.51
+94,person-or-small-group-talking,Stressed,"I'm getting pretty fed up, this is a lot to deal with.",a shopping mall,0.22,0.42
+95,person-or-small-group-talking,Annoyed,"I really can't stand this anymore, it's awful here.",a café or restaurant,0.28,0.48
+96,person-or-small-group-shouting,Calm,"I am absolutely loving this moment, everything feels perfect.",a construction site,0.46,0.66
+97,person-or-small-group-shouting,Content,"This is such a nice spot, I'm really enjoying being here.",an industrial area,0.46,0.66
+98,person-or-small-group-shouting,Anxious,"Things are pretty good right now, can't complain.",inside a building,0.22,0.42
+99,person-or-small-group-shouting,Stressed,"It's fine here, nothing special either way.",an office,0.10,0.30
+100,person-or-small-group-shouting,Annoyed,I'm not really sure how I feel about this place.,a home interior,0.15,0.35
+101,large-crowd,Calm,This is starting to get to me a little.,a school or university campus,0.49,0.69
+102,large-crowd,Content,"I'm getting pretty fed up, this is a lot to deal with.",a playground,0.51,0.71
+103,large-crowd,Anxious,"I really can't stand this anymore, it's awful here.",a train station or airport,0.13,0.33
+104,large-crowd,Stressed,"I am absolutely loving this moment, everything feels perfect.",a parking lot,0.22,0.42
+105,large-crowd,Annoyed,"This is such a nice spot, I'm really enjoying being here.",a park,0.37,0.57
+106,amplified-speech,Calm,"Things are pretty good right now, can't complain.",a garden,0.62,0.82
+107,amplified-speech,Content,"It's fine here, nothing special either way.",a forest or wooded area,0.61,0.81
+108,amplified-speech,Anxious,I'm not really sure how I feel about this place.,a beach or waterfront,0.30,0.50
+109,amplified-speech,Stressed,This is starting to get to me a little.,a busy street,0.06,0.26
+110,amplified-speech,Annoyed,"I'm getting pretty fed up, this is a lot to deal with.",a traffic intersection,0.08,0.28
+111,dog-barking-whining,Calm,"I really can't stand this anymore, it's awful here.",a highway or motorway,0.34,0.54
+112,dog-barking-whining,Content,"I am absolutely loving this moment, everything feels perfect.",a residential street,0.64,0.84
+113,dog-barking-whining,Anxious,"This is such a nice spot, I'm really enjoying being here.",a quiet alley,0.31,0.51
+114,dog-barking-whining,Stressed,"Things are pretty good right now, can't complain.",a market or bazaar,0.17,0.37
+115,dog-barking-whining,Annoyed,"It's fine here, nothing special either way.",a shopping mall,0.18,0.38

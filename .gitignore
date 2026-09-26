@@ -12,10 +12,13 @@ __pycache__/
 .mypy_cache/
 
 # ---- Evaluation datasets ------------------------------------------------
-# Not redistributable. SONYC-UST, RAVDESS, LibriSpeech and Places365 are
-# obtained from their own providers under their own licences; Places365 in
-# particular forbids redistribution of its images. ~2 GB total.
-Test/Model Test/Datasets/
+# SONYC-UST (CC BY 4.0), LibriSpeech (CC BY 4.0) and RAVDESS (CC BY-NC-SA 4.0)
+# are included and redistributed under their own licences — see
+# Test/Model Test/Datasets/ATTRIBUTION.md.
+#
+# Places365 is NOT included: its terms prohibit redistribution of its images.
+# Download it yourself and place it at the path below (see README).
+Test/Model Test/Datasets/Scene Classification/
 
 # ---- Runtime data -------------------------------------------------------
 # Created on first run; contains diary entries and map pins.

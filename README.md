@@ -159,27 +159,61 @@ Press `i` for the iOS simulator or scan the QR code with Expo Go.
 
 ## Datasets
 
-**The datasets are not included in this repository.** Each is obtained from its
-own provider under its own licence, and Places365 explicitly prohibits
-redistribution of its images.
+Three of the four evaluation datasets are **included** in this repository under
+`Test/Model Test/Datasets/`, redistributed under their own licences. Full
+citations are in [`Datasets/ATTRIBUTION.md`](Test/Model%20Test/Datasets/ATTRIBUTION.md).
 
-| Dataset | Used for | Source | Licence |
+| Dataset | Used for | Included? | Licence |
 |---|---|---|---|
-| SONYC-UST v2 | Sound classification (23 fine classes) | [Zenodo](https://zenodo.org/records/3966543) | CC BY 4.0 |
-| Places365 (validation) | Scene classification | [places2.csail.mit.edu](http://places2.csail.mit.edu/) | Non-commercial research/education; **redistribution prohibited** |
-| LibriSpeech `test-clean` | Speech transcription | [openslr.org/12](https://www.openslr.org/12) | CC BY 4.0 |
-| RAVDESS | Speech emotion recognition | [Zenodo](https://zenodo.org/records/1188976) | CC BY-NC-SA 4.0 |
+| SONYC-UST v2 (664-clip subset) | Sound classification (23 fine classes) | Yes | CC BY 4.0 |
+| LibriSpeech `test-clean` | Speech transcription | Yes | CC BY 4.0 |
+| RAVDESS (Actors 01–24) | Speech emotion recognition | Yes | CC BY-NC-SA 4.0 |
+| Places365 (validation) | Scene classification | **No — fetch it yourself** | Non-commercial; **redistribution prohibited** |
 
-Verify the current terms at each source before use. Once downloaded, point the
-evaluation scripts at your own copy with `--dataset-dir`:
+> **RAVDESS is NonCommercial.** Because this repository includes it, the
+> repository as a whole cannot be used for commercial purposes without first
+> removing `Datasets/Emotion Detection from Speech/`.
+
+**Places365** must be downloaded from
+[places2.csail.mit.edu](http://places2.csail.mit.edu/); its licence forbids us
+from shipping the images. Verify the current terms at each source before use.
+
+### Pointing the scripts at a dataset
+
+The three bundled datasets are already in place, but the scripts that use them
+default to an absolute path from the original development machine, so pass
+`--dataset-dir` to point at the copy in this repository:
 
 ```bash
 python3 "Test/Model Test/model_evaluation/Sound Classification/test_efficientat_sonyc_ust.py" \
-  --dataset-dir /path/to/SONYC
+  --dataset-dir "Test/Model Test/Datasets/Sound Classification/SONYC-UST_test_split_664"
+```
+
+**Places365 is the exception** — the Scene Classification scripts take no
+`--dataset-dir` and read from a fixed location instead. Place the 21 category
+folders here:
+
+```
+Test/Model Test/Datasets/Scene Classification/places365_torch_uncertainty/
+├── park/
+├── botanical_garden/
+├── forest-broadleaf/
+├── beach/
+├── street/
+└── … 16 more (see SCENE_TO_PLACES365 in build_scene_eval_set.py)
+```
+
+Each folder needs at least 20 images. Then build the eval set before testing —
+this writes `scene_eval_set.csv` (21 scenes × 20 = 420 rows) alongside the
+images, which `test_scene_classification.py` then reads:
+
+```bash
+python3 "Test/Model Test/model_evaluation/Scene Classification/build_scene_eval_set.py"
 ```
 
 The Stage 4 evaluation set is generated rather than downloaded, and is built by
-the `build_wellbeing_eval_set_4input.py` script in the same folder.
+`build_wellbeing_eval_set_4input.py` under
+`model_evaluation/Wellbeing Scoring & Explanation/range testing/`.
 
 ---
 
@@ -208,15 +242,29 @@ cd "Test/Unit Testing/frontend" && npx jest
 every stage against a public dataset, then merges the results into one
 comparison. Requires the datasets above, and takes a long time.
 
+> **One extra prerequisite.** `test_efficientat_sonyc_ust.py` benchmarks the
+> upstream EfficientAT training code, so it needs a clone of the original
+> repository at `/tmp/EfficientAT`:
+>
+> ```bash
+> git clone https://github.com/fschmid56/EfficientAT /tmp/EfficientAT
+> ```
+>
+> This is only needed for that one evaluation script. **The application itself
+> needs nothing extra** — it uses the copy vendored at `models/efficientat_src/`.
+> To clone elsewhere, edit `EFFICIENTAT_REPO` at the top of the script.
+
 ```bash
 cd "Test/Model Test/model_evaluation"
 python3 "Sound Classification/test_efficientat_sonyc_ust.py" --dataset-dir /path/to/SONYC
 python3 "Sound Classification/compare_sonyc_ust_models.py"
 ```
 
-The same pattern applies to Scene Classification, Voice Note Transcription,
-Emotion Detection from Speech, and Wellbeing Scoring & Explanation. Results and
-comparison charts are written to `Test/Model Test/Test-Results/`.
+The same test-then-compare pattern applies to Voice Note Transcription, Emotion
+Detection from Speech, and Wellbeing Scoring & Explanation. Scene Classification
+follows it too, but takes no `--dataset-dir` and needs its eval set built first
+— see the Places365 note above. Results and comparison charts are written to
+`Test/Model Test/Test-Results/`.
 
 ### 3. Functionality Tests
 
