@@ -77,6 +77,10 @@ UrbanPulse_Prototype/
 Roughly **8 GB of RAM** is needed with all five models resident. Model weights
 (~3 GB) download automatically on first run and are cached thereafter.
 
+> **Clone size:** this repository bundles the evaluation datasets, so a full
+> clone is roughly **1 GB**. To skip them, clone with `--filter=blob:none` or
+> download the source as a ZIP from the repository's Code menu.
+
 ### Audio File Processing
 
 Incoming audio is normalised to mono WAV before inference, at whichever sample
@@ -256,7 +260,8 @@ comparison. Requires the datasets above, and takes a long time.
 
 ```bash
 cd "Test/Model Test/model_evaluation"
-python3 "Sound Classification/test_efficientat_sonyc_ust.py" --dataset-dir /path/to/SONYC
+python3 "Sound Classification/test_efficientat_sonyc_ust.py" \
+  --dataset-dir "../Datasets/Sound Classification/SONYC-UST_test_split_664"
 python3 "Sound Classification/compare_sonyc_ust_models.py"
 ```
 
