@@ -24,7 +24,7 @@ from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 TESTS_ROOT = os.path.dirname(os.path.dirname(_THIS_DIR))
 
-DEFAULT_DATASET_DIR = "/Users/alizeaarif/Desktop/Audio_Speech_Actors_01-24"
+DEFAULT_DATASET_DIR = os.path.join(TESTS_ROOT, "Datasets", "Emotion Detection from Speech", "RAVDESS_Audio_Speech_Actors_01-24")
 RESULTS_DIR = os.path.join(TESTS_ROOT, "Test-Results", "Emotion Detection from Speech", "Yassmen_Calibration")
 
 MODEL_NAME = "Yassmen/Wav2Vec2_Fine_tuned_on_CremaD_Speech_Emotion_Recognition"

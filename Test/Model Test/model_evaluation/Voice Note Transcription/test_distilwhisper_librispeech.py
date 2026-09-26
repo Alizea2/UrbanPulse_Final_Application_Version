@@ -26,7 +26,7 @@ transformers.logging.set_verbosity_error()
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))  # .../Tests/model_evaluation/Voice Note Transcription
 TESTS_ROOT = os.path.dirname(os.path.dirname(_THIS_DIR))  # .../Tests
 
-DEFAULT_DATASET_DIR = "/Users/alizeaarif/Desktop/LibriSpeech/test-clean"
+DEFAULT_DATASET_DIR = os.path.join(TESTS_ROOT, "Datasets", "Voice Note Transcription", "LibriSpeech_test-clean")
 RESULTS_DIR = os.path.join(TESTS_ROOT, "Test-Results", "Voice Note Transcription", "DistilWhisper_LibriSpeech")
 
 MODEL_NAME = "distil-whisper/distil-small.en"

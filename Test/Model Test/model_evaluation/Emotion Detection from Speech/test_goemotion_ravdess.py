@@ -25,7 +25,7 @@ sys.path.insert(0, _THIS_DIR)
 
 from goemotion_classifier import load_goemotion_model, classify_emotion, EMOTION_MAP
 
-DEFAULT_DATASET_DIR = "/Users/alizeaarif/Desktop/Audio_Speech_Actors_01-24"
+DEFAULT_DATASET_DIR = os.path.join(TESTS_ROOT, "Datasets", "Emotion Detection from Speech", "RAVDESS_Audio_Speech_Actors_01-24")
 RESULTS_DIR = os.path.join(TESTS_ROOT, "Test-Results", "Emotion Detection from Speech", "GoEmotions_RAVDESS")
 
 RAVDESS_CODE_NAMES = {

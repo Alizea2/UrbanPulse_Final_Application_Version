@@ -21,7 +21,7 @@ from sklearn.metrics import precision_recall_fscore_support, hamming_loss, roc_a
 
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))  # .../Tests/model_evaluation/Sound Classification
 PROJECT_ROOT = os.path.dirname(os.path.dirname(_THIS_DIR))  # .../Tests
-DEFAULT_DATASET_DIR = "/Users/alizeaarif/Desktop/SONYC"
+DEFAULT_DATASET_DIR = os.path.join(PROJECT_ROOT, "Datasets", "Sound Classification", "SONYC-UST_test_split_664")
 RESULTS_DIR = os.path.join(PROJECT_ROOT, "Test-Results", "Sound Classification", "PANNs_SONYC-UST")
 
 PANNS_SAMPLE_RATE = 32000
@@ -113,6 +113,8 @@ def predict_topk_fine(model, class_names, class_name_to_idx, wav_path, k):
 # Builds one ground-truth label per clip from the annotations.
 def load_ground_truth(dataset_dir, split):
     meta_path = os.path.join(dataset_dir, "annotations.csv")
+    if not os.path.exists(meta_path):  # bundled test-split subset
+        meta_path = os.path.join(dataset_dir, "annotations_test_split.csv")
     votes = defaultdict(lambda: defaultdict(list))
     with open(meta_path) as f:
         reader = csv.DictReader(f)
@@ -147,7 +149,7 @@ def run_evaluation(dataset_dir, split, top_k):
     file_index = {}
     for entry in os.listdir(dataset_dir):
         full = os.path.join(dataset_dir, entry)
-        if entry.startswith("audio-") and os.path.isdir(full):
+        if (entry.startswith("audio-") or entry == "audio") and os.path.isdir(full):
             for fn in os.listdir(full):
                 file_index[fn] = os.path.join(full, fn)
 

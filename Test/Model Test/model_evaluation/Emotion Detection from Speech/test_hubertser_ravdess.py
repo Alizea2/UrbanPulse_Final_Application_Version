@@ -22,7 +22,7 @@ from sklearn.metrics import precision_recall_fscore_support, accuracy_score, con
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))  # .../Tests/model_evaluation/Emotion Detection from Speech
 TESTS_ROOT = os.path.dirname(os.path.dirname(_THIS_DIR))  # .../Tests
 
-DEFAULT_DATASET_DIR = "/Users/alizeaarif/Desktop/Audio_Speech_Actors_01-24"
+DEFAULT_DATASET_DIR = os.path.join(TESTS_ROOT, "Datasets", "Emotion Detection from Speech", "RAVDESS_Audio_Speech_Actors_01-24")
 RESULTS_DIR = os.path.join(TESTS_ROOT, "Test-Results", "Emotion Detection from Speech", "HubertSER_RAVDESS")
 
 MODEL_NAME = "superb/hubert-large-superb-er"

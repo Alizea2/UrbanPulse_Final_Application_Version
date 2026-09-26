@@ -184,13 +184,19 @@ from shipping the images. Verify the current terms at each source before use.
 
 ### Pointing the scripts at a dataset
 
-The three bundled datasets are already in place, but the scripts that use them
-default to an absolute path from the original development machine, so pass
-`--dataset-dir` to point at the copy in this repository:
+For SONYC-UST, LibriSpeech and RAVDESS **nothing needs configuring** — each
+script defaults to the bundled copy in this repository, so it runs as-is:
+
+```bash
+python3 "Test/Model Test/model_evaluation/Sound Classification/test_efficientat_sonyc_ust.py"
+```
+
+Pass `--dataset-dir` only to use a different copy, such as the full SONYC-UST
+release rather than the bundled test split:
 
 ```bash
 python3 "Test/Model Test/model_evaluation/Sound Classification/test_efficientat_sonyc_ust.py" \
-  --dataset-dir "Test/Model Test/Datasets/Sound Classification/SONYC-UST_test_split_664"
+  --dataset-dir /path/to/full/SONYC-UST
 ```
 
 **Places365 is the exception** — the Scene Classification scripts take no
@@ -260,8 +266,7 @@ comparison. Requires the datasets above, and takes a long time.
 
 ```bash
 cd "Test/Model Test/model_evaluation"
-python3 "Sound Classification/test_efficientat_sonyc_ust.py" \
-  --dataset-dir "../Datasets/Sound Classification/SONYC-UST_test_split_664"
+python3 "Sound Classification/test_efficientat_sonyc_ust.py"
 python3 "Sound Classification/compare_sonyc_ust_models.py"
 ```
 
